@@ -7,6 +7,7 @@ namespace LibraryManagementSystem.Models.Entities
         [Key] public Guid Id { get; set; }
         [EmailAddress] [Required] public string Email {  get; set; }
         [Required] public string Password { get; set; }
+        public string PasswordSalt { get; set; }
         [Required] public string Name { get; set; }
         [Required] public string Role { get; set; }
         public bool Warning { get; set; } = false;

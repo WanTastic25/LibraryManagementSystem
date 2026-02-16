@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "LibraryManagementSystem.Controllers.AuthController",
+    "Method": "LoginUser",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginUserDto",
+        "Type": "LibraryManagementSystem.Models.UserDto.LoginUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.AuthController",
+    "Method": "RegisterUser",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerMemberDto",
+        "Type": "LibraryManagementSystem.Models.UserDto.RegisterMemberDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LibraryManagementSystem.Controllers.BookController",
     "Method": "GetAllBooks",
     "RelativePath": "api/Book",
@@ -57,6 +89,53 @@
       {
         "Name": "bookId",
         "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.UserController",
+    "Method": "GetAllUser",
+    "RelativePath": "api/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/User/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateUserDto",
+        "Type": "LibraryManagementSystem.Models.UserDto.UpdateUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.UserController",
+    "Method": "AddUser",
+    "RelativePath": "api/User/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addUserDto",
+        "Type": "LibraryManagementSystem.Models.UserDto.AddUserDto",
         "IsRequired": true
       }
     ],

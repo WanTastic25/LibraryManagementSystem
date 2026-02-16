@@ -4,7 +4,6 @@ using LibraryManagementSystem.Models.Entities;
 using LibraryManagementSystem.Models.BookDto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc;
 
 namespace LibraryManagementSystem.Controllers
 {

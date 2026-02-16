@@ -3,32 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|solutionrelative:controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\models\\bookdto\\updatebookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|solutionrelative:models\\bookdto\\updatebookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\models\\userdto\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|solutionrelative:models\\userdto\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|solutionrelative:controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\models\\bookdto\\addbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|solutionrelative:models\\bookdto\\addbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\models\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|solutionrelative:models\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\models\\bookdto\\memberbookcataloguedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|solutionrelative:models\\bookdto\\memberbookcataloguedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\models\\bookdto\\updatebookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|solutionrelative:models\\bookdto\\updatebookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\models\\entities\\borrowedbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|solutionrelative:models\\entities\\borrowedbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\models\\userdto\\adduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|solutionrelative:models\\userdto\\adduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\models\\userdto\\registermemberdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|solutionrelative:models\\userdto\\registermemberdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|solutionrelative:models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\models\\entities\\borrowedbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|LibraryManagementSystem.csproj|solutionrelative:models\\entities\\borrowedbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,97 +54,149 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UpdateBookDto.cs",
-              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\BookDto\\UpdateBookDto.cs",
-              "RelativeDocumentMoniker": "Models\\BookDto\\UpdateBookDto.cs",
-              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\BookDto\\UpdateBookDto.cs",
-              "RelativeToolTip": "Models\\BookDto\\UpdateBookDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T10:12:12.949Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\Entities\\Book.cs",
-              "RelativeDocumentMoniker": "Models\\Entities\\Book.cs",
-              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\Entities\\Book.cs",
-              "RelativeToolTip": "Models\\Entities\\Book.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T09:49:58.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AddBookDto.cs",
               "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\BookDto\\AddBookDto.cs",
               "RelativeDocumentMoniker": "Models\\BookDto\\AddBookDto.cs",
               "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\BookDto\\AddBookDto.cs",
               "RelativeToolTip": "Models\\BookDto\\AddBookDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T09:49:25.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BookController.cs",
-              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Controllers\\BookController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BookController.cs",
-              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Controllers\\BookController.cs",
-              "RelativeToolTip": "Controllers\\BookController.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAqwFEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T09:18:36.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAAAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T05:26:52.082Z",
+              "WhenOpened": "2026-02-16T10:17:17.341Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "BorrowedBook.cs",
-              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\Entities\\BorrowedBook.cs",
-              "RelativeDocumentMoniker": "Models\\Entities\\BorrowedBook.cs",
-              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\Entities\\BorrowedBook.cs",
-              "RelativeToolTip": "Models\\Entities\\BorrowedBook.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAxAAAAAAAAAA==",
+              "Title": "MemberBookCatalogueDto.cs",
+              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\BookDto\\MemberBookCatalogueDto.cs",
+              "RelativeDocumentMoniker": "Models\\BookDto\\MemberBookCatalogueDto.cs",
+              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\BookDto\\MemberBookCatalogueDto.cs",
+              "RelativeToolTip": "Models\\BookDto\\MemberBookCatalogueDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T08:43:38.219Z",
+              "WhenOpened": "2026-02-16T10:17:16.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\UserDto\\LoginUserDto.cs",
+              "RelativeDocumentMoniker": "Models\\UserDto\\LoginUserDto.cs",
+              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\UserDto\\LoginUserDto.cs",
+              "RelativeToolTip": "Models\\UserDto\\LoginUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T10:17:13.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BookController.cs",
+              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Controllers\\BookController.cs",
+              "RelativeToolTip": "Controllers\\BookController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T06:50:11.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAkwDAAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T08:50:20.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAkwFEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T06:51:36.573Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "UpdateBookDto.cs",
+              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\BookDto\\UpdateBookDto.cs",
+              "RelativeDocumentMoniker": "Models\\BookDto\\UpdateBookDto.cs",
+              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\BookDto\\UpdateBookDto.cs",
+              "RelativeToolTip": "Models\\BookDto\\UpdateBookDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T10:17:15.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegisterMemberDto.cs",
+              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\UserDto\\RegisterMemberDto.cs",
+              "RelativeDocumentMoniker": "Models\\UserDto\\RegisterMemberDto.cs",
+              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\UserDto\\RegisterMemberDto.cs",
+              "RelativeToolTip": "Models\\UserDto\\RegisterMemberDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T10:17:13.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BorrowedBook.cs",
+              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\Entities\\BorrowedBook.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\BorrowedBook.cs",
+              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\Entities\\BorrowedBook.cs",
+              "RelativeToolTip": "Models\\Entities\\BorrowedBook.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T10:17:06.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Models\\Entities\\User.cs",
               "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\Entities\\User.cs",
               "RelativeToolTip": "Models\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T08:23:47.12Z",
+              "WhenOpened": "2026-02-16T09:40:08.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\UserDto\\AddUserDto.cs",
+              "RelativeDocumentMoniker": "Models\\UserDto\\AddUserDto.cs",
+              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Models\\UserDto\\AddUserDto.cs",
+              "RelativeToolTip": "Models\\UserDto\\AddUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T09:08:47.596Z",
               "EditorCaption": ""
             }
           ]
