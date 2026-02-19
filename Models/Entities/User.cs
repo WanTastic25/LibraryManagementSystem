@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace LibraryManagementSystem.Models.Entities
 {
@@ -11,6 +12,6 @@ namespace LibraryManagementSystem.Models.Entities
         [Required] public string Name { get; set; }
         [Required] public string Role { get; set; }
         public bool Warning { get; set; } = false;
-        public ICollection<BorrowedBook>? BorrowedBooks { get; set; }
+        [JsonIgnore] public ICollection<BorrowedBook>? BorrowedBooks { get; set; }
     }
 }

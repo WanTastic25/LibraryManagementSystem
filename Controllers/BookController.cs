@@ -25,6 +25,21 @@ namespace LibraryManagementSystem.Controllers
             return Ok(allBooks);
         }
 
+        [HttpGet("catalogue")]
+        public async Task<ActionResult<IEnumerable<MemberBookCatalogueDto>>> GetCatalogueBooks()
+        {
+            var books = await dbContext.Books
+                .Select(b => new MemberBookCatalogueDto
+                {
+                    ISBN = b.ISBN,
+                    Title = b.Title,
+                    Author = b.Author
+                })
+        .ToListAsync();
+
+            return Ok(books);
+        }
+
         [HttpPost]
         public async Task<IActionResult> AddBook(AddBookDto addBookDto)
         {
@@ -76,7 +91,7 @@ namespace LibraryManagementSystem.Controllers
                 dbContext.Books.Remove(book);
                 dbContext.SaveChanges();
 
-                return Ok(book);
+                return Ok("Delete Success");
             }
 
             return NotFound();

@@ -95,6 +95,68 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LibraryManagementSystem.Controllers.BookController",
+    "Method": "GetCatalogueBooks",
+    "RelativePath": "api/Book/catalogue",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[LibraryManagementSystem.Models.BookDto.MemberBookCatalogueDto, LibraryManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.BorrowedBookController",
+    "Method": "GetAllBorrowedBooks",
+    "RelativePath": "api/BorrowedBook",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.BorrowedBookController",
+    "Method": "AddBorrowedBook",
+    "RelativePath": "api/BorrowedBook",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addBorrowedBookDto",
+        "Type": "LibraryManagementSystem.Models.BorrowedBookDto.AddBorrowedBookDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.BorrowedBookController",
+    "Method": "returnBorrowedBook",
+    "RelativePath": "api/BorrowedBook/{BorrowId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "BorrowId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LibraryManagementSystem.Controllers.UserController",
     "Method": "GetAllUser",
     "RelativePath": "api/User",
@@ -120,6 +182,22 @@
       {
         "Name": "updateUserDto",
         "Type": "LibraryManagementSystem.Models.UserDto.UpdateUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/User/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
