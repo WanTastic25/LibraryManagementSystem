@@ -74,7 +74,7 @@ namespace LibraryManagementSystem.Controllers
 
             var hash = HashPassword(loginUserDto.Password, user.PasswordSalt);
             if (hash != user.Password)
-                return Unauthorized();
+                return Unauthorized("Invalid password");
 
             return Ok(new
             {

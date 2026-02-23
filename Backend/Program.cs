@@ -1,4 +1,3 @@
-
 using LibraryManagementSystem.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -33,6 +32,8 @@ namespace LibraryManagementSystem
             }
 
             // app.UseHttpsRedirection();
+
+            app.UseCors();
 
             app.UseAuthorization();
 

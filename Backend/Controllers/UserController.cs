@@ -60,7 +60,7 @@ namespace LibraryManagementSystem.Controllers
             var user = new User()
             {
                 Email = addUserDto.Email,
-                Password = addUserDto.Password,
+                Password = hashedPassword,
                 PasswordSalt = passwordSalt,
                 Name = addUserDto.Name,
                 Role = addUserDto.Role,
