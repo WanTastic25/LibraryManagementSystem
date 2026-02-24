@@ -17,7 +17,7 @@ function Register() {
         const res = await fetch('http://localhost:5009/api/Auth/register', {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(loginData)
+            body: JSON.stringify(registerData)
         });
 
         if (!res.ok)
@@ -28,15 +28,15 @@ function Register() {
     }
 
     return (
-        <div>
-            <form onSubmit={register}>
+        <div className="tableCard d-flex justify-content-center flex-column border shadow p-5 m-5">
+            <form onSubmit={register} className="d-flex justify-content-center flex-column">
                 <label htmlFor="">Email:</label>
                 <input type="text" ref={emailRef} />
 
                 <label htmlFor="">Password:</label>
                 <input type="password" ref={passwordRef} />
 
-                <label htmlFor="">Password:</label>
+                <label htmlFor="">Name:</label>
                 <input type="name" ref={nameRef} />
 
                 <button className="btn btn-primary mt-3" type="submit">Register</button>

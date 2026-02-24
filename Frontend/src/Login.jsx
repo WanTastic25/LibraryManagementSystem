@@ -26,15 +26,17 @@ function Login() {
     }
 
     return (
-        <form onSubmit={loginCheck}>
-            <label htmlFor="">Email:</label>
-            <input type="text" ref={emailRef} />
+        <div className="tableCard d-flex justify-content-center flex-column border shadow p-5 m-5">
+            <form onSubmit={loginCheck} className="d-flex justify-content-center flex-column">
+                <label>Email:</label>
+                <input type="text" ref={emailRef} />
 
-            <label htmlFor="">Password:</label>
-            <input type="password" ref={passwordRef} />
+                <label>Password:</label>
+                <input type="password" ref={passwordRef} />
 
-            <button className="btn btn-primary mt-3" type="submit">Login</button>
-        </form>
+                <button className="btn btn-primary mt-3" type="submit">Login</button>
+            </form>
+        </div>
     )
 }
 
