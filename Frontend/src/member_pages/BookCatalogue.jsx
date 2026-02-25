@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 
-function BookCatalogue() {
+function BookCatalogue({ onViewMore }) {
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -29,17 +29,24 @@ function BookCatalogue() {
 
     return (
         <div className="container-fluid p-5 min-vh-100 align-content-center border">
-            <div className="row g-4">
-                <div className="col-md-12">
-                    {books.map(book => (
-                        <div className="card" key={book.id}>
+            <div className="row g-2">
+                {books.map(book => (
+                    <div className="col" key={book.bookId}>
+                        <div className="card">
                             <div className="card-body">
                                 <p>{book.title}</p>
-                                <p>Test</p>
+                                <p>{book.author}</p>
+                                <button className="btn btn-primary">Borrow</button>
+                                <button className="btn btn-secondary" onClick={() => {
+                                    console.log("Sending ID:", book.bookId);
+                                    onViewMore(book.bookId)
+                                }}>
+                                    More..
+                                </button>
                             </div>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
         </div>
     )

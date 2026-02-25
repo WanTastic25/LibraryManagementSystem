@@ -40,6 +40,18 @@ namespace LibraryManagementSystem.Controllers
             return Ok(books);
         }
 
+        [HttpGet]
+        [Route("{bookId:guid}")]
+        public async Task<IActionResult> GetBookById(Guid bookId)
+        {
+            var book = await dbContext.Books.FindAsync(bookId);
+
+            if (book == null)
+                return NotFound();
+            else
+                return Ok(book);
+        }
+
         [HttpPost]
         public async Task<IActionResult> AddBook(AddBookDto addBookDto)
         {
