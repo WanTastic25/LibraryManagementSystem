@@ -38,7 +38,6 @@ function BookCatalogue({ onViewMore }) {
                                 <p>{book.author}</p>
                                 <button className="btn btn-primary">Borrow</button>
                                 <button className="btn btn-secondary" onClick={() => {
-                                    console.log("Sending ID:", book.bookId);
                                     onViewMore(book.bookId)
                                 }}>
                                     More..

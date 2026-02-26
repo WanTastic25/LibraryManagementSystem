@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 function BookView({ bookId }) {
     const [book, setBook] = useState(null)
-
+    
     useEffect(() => {
         if (!bookId) return;
 
@@ -25,13 +25,13 @@ function BookView({ bookId }) {
         <div>
             <div>
                 <label>ISBN</label>
-                <p>{book.isbn}</p>
+                <p>{book?.isbn}</p>
                 <label>Title</label>
-                <p>{book.title}</p>
+                <p>{book?.title}</p>
                 <label>Author</label>
-                <p>{book.author}</p>
+                <p>{book?.author}</p>
                 <label>Copies Available</label>
-                <p>{book.copies}</p>
+                <p>{book?.copies}</p>
             </div>
         </div>
     )

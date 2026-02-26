@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function UpdateBook() {
+function UpdateBook({ editBookId }) {
     const [bookId, setId] = useState("");
 
     const [loading, setLoading] = useState(true);
@@ -13,7 +13,10 @@ function UpdateBook() {
     });
 
     useEffect(() => {
-        fetch(`http://localhost:5009/api/Book/${bookId}`)
+        if (!editBookId)
+            return
+
+        fetch(`http://localhost:5009/api/Book/${editBookId}`)
             .then(res => {
                 if (!res.ok) throw new Error("Network response was not ok");
                 return res.json();
@@ -26,7 +29,7 @@ function UpdateBook() {
                 setError(err.message);
                 setLoading(false);
             });
-    }, [bookId]);
+    }, [editBookId]);
 
     function handleChange(e) {
         const { name, value } = e.target;
@@ -39,7 +42,7 @@ function UpdateBook() {
     function handleSubmit(e) {
         e.preventDefault();
 
-        fetch(`http://localhost:5009/api/Book/${bookId}`, {
+        fetch(`http://localhost:5009/api/Book/${editBookId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
