@@ -5,26 +5,26 @@ function BookList({ onEdit }) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    function FetchBook() {
-        setLoading(true);
-
-        fetch("http://localhost:5009/api/Book")
-            .then(res => {
-                if (!res.ok) throw new Error("Network response was not ok");
-                return res.json();
-            })
-            .then(data => {
-                setBooks(data);
-                setLoading(false);
-            })
-            .catch(err => {
-                setError(err.message);
-                setLoading(false);
-            });
-    }
-
     useEffect(() => {
-        FetchBook();
+        function fetchBook() {
+            setLoading(true);
+
+            fetch("http://localhost:5009/api/Book")
+                .then(res => {
+                    if (!res.ok) throw new Error("Network response was not ok");
+                    return res.json();
+                })
+                .then(data => {
+                    setBooks(data);
+                    setLoading(false);
+                })
+                .catch(err => {
+                    setError(err.message);
+                    setLoading(false);
+                });
+        }
+
+        fetchBook();
     }, []);
 
     return (

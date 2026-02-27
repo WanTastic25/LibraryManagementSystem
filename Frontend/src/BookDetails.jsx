@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-function BookView({ bookId }) {
+function BookDetails({ bookId }) {
     const [book, setBook] = useState(null)
     
     useEffect(() => {
@@ -37,4 +37,4 @@ function BookView({ bookId }) {
     )
 }
 
-export default BookView
+export default BookDetails

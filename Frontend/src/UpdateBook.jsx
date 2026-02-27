@@ -13,8 +13,7 @@ function UpdateBook({ editBookId }) {
     });
 
     useEffect(() => {
-        if (!editBookId)
-            return
+        if (!editBookId) return
 
         fetch(`http://localhost:5009/api/Book/${editBookId}`)
             .then(res => {
@@ -33,7 +32,7 @@ function UpdateBook({ editBookId }) {
 
     function handleChange(e) {
         const { name, value } = e.target;
-        setHero(prev => ({
+        setBook(prev => ({
             ...prev,
             [name]: value
         }));
@@ -54,7 +53,7 @@ function UpdateBook({ editBookId }) {
                 return res.json();
             })
             .then(() => {
-                alert("Hero updated!");
+                alert("Book updated!");
             })
             .catch(err => alert(err.message));
     }
@@ -66,7 +65,7 @@ function UpdateBook({ editBookId }) {
         <div className="tableCard d-flex justify-content-center flex-column p-5 m-5">
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label className="form-label basicText">ISBN</label>
+                    <label className="form-label">ISBN</label>
                     <input
                         className="form-control"
                         type="text"
@@ -77,7 +76,7 @@ function UpdateBook({ editBookId }) {
                 </div>
 
                 <div>
-                    <label className="form-label basicText">Author</label>
+                    <label className="form-label">Author</label>
                     <input
                         className="form-control"
                         type="text"
@@ -88,7 +87,7 @@ function UpdateBook({ editBookId }) {
                 </div>
 
                 <div>
-                    <label className="form-label basicText">Title</label>
+                    <label className="form-label">Title</label>
                     <input
                         className="form-control"
                         type="text"
@@ -99,7 +98,7 @@ function UpdateBook({ editBookId }) {
                 </div>
 
                 <div>
-                    <label className="form-label basicText" >Copies</label>
+                    <label className="form-label" >Copies</label>
                     <input
                         className="form-control"
                         type="number"

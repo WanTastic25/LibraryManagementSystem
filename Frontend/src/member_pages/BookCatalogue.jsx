@@ -5,25 +5,25 @@ function BookCatalogue({ onViewMore }) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    const fetchBooks = async (e) => {
-        setLoading(true);
-
-        try {
-            const res = await fetch('http://localhost:5009/api/Book')
-
-            if (!res.ok)
-                throw new Error("No Response")
-
-            const data = await res.json();
-            setBooks(data);
-
-        } catch (err) {
-            setError(err.message);
-            setLoading(false);
-        }
-    }
-
     useEffect(() => {
+        const fetchBooks = async () => {
+            setLoading(true);
+
+            try {
+                const res = await fetch('http://localhost:5009/api/Book')
+
+                if (!res.ok)
+                    throw new Error("No Response")
+
+                const data = await res.json();
+                setBooks(data);
+
+            } catch (err) {
+                setError(err.message);
+                setLoading(false);
+            }
+        }
+
         fetchBooks();
     }, []);
 
