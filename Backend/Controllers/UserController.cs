@@ -46,7 +46,7 @@ namespace LibraryManagementSystem.Controllers
             return Ok(allUsers);
         }
 
-        [HttpPost("add")]
+        [HttpPost]
         public async Task<IActionResult> AddUser(AddUserDto addUserDto)
         {
             var existingUser = await dbContext.Users.FirstOrDefaultAsync(x => x.Email == addUserDto.Email);
