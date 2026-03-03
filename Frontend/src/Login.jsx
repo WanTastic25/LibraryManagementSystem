@@ -1,3 +1,4 @@
+import { Alert } from "bootstrap";
 import { useRef } from "react";
 
 function Login() {
@@ -22,7 +23,19 @@ function Login() {
             throw new Error("Login Failed");
 
         const data = await res.json();
-        alert("Welcome!");
+
+        sessionStorage.setItem("user", JSON.stringify(data));
+        const user = sessionStorage.getItem("user")
+
+        if (data.userRole == "Member") {
+            window.location.href = "/catalogue";
+        }
+        else if (data.userRole === "Admin" || data.userRole === "Librarian") {
+            window.location.href = "/book-list"
+        }
+        else {
+            throw new Error("Login Failed");
+        }
     }
 
     return (

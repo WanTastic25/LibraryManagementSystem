@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 
 function UpdateBook({ editBookId }) {
-    const [bookId, setId] = useState("");
-
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [book, setBook] = useState({

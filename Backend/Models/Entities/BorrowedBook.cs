@@ -16,5 +16,6 @@ namespace LibraryManagementSystem.Models.Entities
         public DateTime ReturnDate { get; set; }
         public DateTime BorrowDate { get; set; }
         public bool IsOverdue { get; set; }
+        public bool IsReturned { get; set; }
     }
 }

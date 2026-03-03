@@ -12,8 +12,6 @@ namespace LibraryManagementSystem.Data
         public DbSet<Book> Books { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<BorrowedBook> BorrowedBooks { get; set; }
-        public DbSet<BookActionRequest> BookActionRequests { get; set; }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Borrowed Book
@@ -36,28 +34,6 @@ namespace LibraryManagementSystem.Data
                 .HasOne(b => b.Book)
                 .WithMany(book => book.BorrowedBooks)
                 .HasForeignKey(b => b.BookId);
-
-            // Book Action Request
-            // Admin
-            modelBuilder.Entity<BookActionRequest>()
-                .HasOne(e => e.Admin)
-                .WithMany()
-                .HasForeignKey(e => e.AdminId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            // Book
-            modelBuilder.Entity<BookActionRequest>()
-                .HasOne(e => e.Book)
-                .WithMany()
-                .HasForeignKey(e => e.BookId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            // Librarian
-            modelBuilder.Entity<BookActionRequest>()
-                .HasOne(e => e.Librarian)
-                .WithMany()
-                .HasForeignKey(e => e.LibrarianId)
-                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

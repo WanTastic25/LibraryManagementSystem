@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function UserList() {
+function UserList({ onEdit }) {
     const [users, setUser] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -27,6 +27,9 @@ function UserList() {
         fetchUser();
     }, []);
 
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error}</div>;
+
     return (
         <div className="tableCard d-flex justify-content-center flex-column p-5 m-5">
             <div className="tableTitle">
@@ -51,7 +54,9 @@ function UserList() {
                                 <td>{user.email}</td>
                                 <td>{user.role}</td>
                                 <td>
-                                    <button className="btn btn-primary">
+                                    <button className="btn btn-primary" onClick={() => {
+                                        onEdit(user.id);
+                                    }}>
                                         Edit
                                     </button>
                                 </td>

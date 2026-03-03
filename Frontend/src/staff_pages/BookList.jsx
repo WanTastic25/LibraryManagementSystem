@@ -52,7 +52,6 @@ function BookList({ onEdit }) {
                                 <td>{book.author}</td>
                                 <td>
                                     <button className="btn btn-primary" onClick={() => {
-                                        console.log(book.bookId)
                                         onEdit(book.bookId)
                                     }}>
                                         Edit

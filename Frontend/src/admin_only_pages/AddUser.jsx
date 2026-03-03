@@ -13,7 +13,7 @@ function AddUser() {
             email: emailRef.current.value,
             password: passwordRef.current.value,
             name: nameRef.current.value,
-            role: roleRef.current.value,
+            role: roleRef.current.value
         }
 
         try {
@@ -53,7 +53,7 @@ function AddUser() {
 
                 <div>
                     <label className="form-label">Roles:</label>
-                    <select className="form-control" required>
+                    <select className="form-control" ref={roleRef} required>
                         <option value="">Select Role</option>
                         <option value="Admin">Admin</option>
                         <option value="Librarian">Librarian</option>

@@ -40,6 +40,18 @@ namespace LibraryManagementSystem.Controllers
         }
 
         [HttpGet]
+        [Route("{userId:guid}")]
+        public async Task<IActionResult> GetUserById(Guid userId)
+        {
+            var user = await dbContext.Users.FindAsync(userId);
+
+            if (user == null)
+                return NotFound();
+            else
+                return Ok(user);
+        }
+
+        [HttpGet]
         public async Task<IActionResult> GetAllUser()
         {
             var allUsers = await dbContext.Users.ToListAsync();

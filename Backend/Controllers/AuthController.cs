@@ -80,7 +80,8 @@ namespace LibraryManagementSystem.Controllers
             {
                 message = "Login successful",
                 userId = user.Id,
-                username = user.Name
+                userName = user.Name,
+                userRole = user.Role
             });
         }
 
