@@ -59,6 +59,22 @@
   },
   {
     "ContainingType": "LibraryManagementSystem.Controllers.BookController",
+    "Method": "GetBookById",
+    "RelativePath": "api/Book/{bookId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.BookController",
     "Method": "UpdateBook",
     "RelativePath": "api/Book/{bookId}",
     "HttpMethod": "PUT",
@@ -157,6 +173,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LibraryManagementSystem.Controllers.CartController",
+    "Method": "CreateCart",
+    "RelativePath": "api/Cart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LibraryManagementSystem.Controllers.UserController",
     "Method": "GetAllUser",
     "RelativePath": "api/User",
@@ -164,6 +190,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.UserController",
+    "Method": "AddUser",
+    "RelativePath": "api/User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addUserDto",
+        "Type": "LibraryManagementSystem.Models.UserDto.AddUserDto",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -205,15 +247,15 @@
   },
   {
     "ContainingType": "LibraryManagementSystem.Controllers.UserController",
-    "Method": "AddUser",
-    "RelativePath": "api/User/add",
-    "HttpMethod": "POST",
+    "Method": "GetUserById",
+    "RelativePath": "api/User/{userId}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "addUserDto",
-        "Type": "LibraryManagementSystem.Models.UserDto.AddUserDto",
+        "Name": "userId",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],

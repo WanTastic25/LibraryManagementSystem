@@ -13,7 +13,12 @@ function UpdateBook({ editBookId }) {
     useEffect(() => {
         if (!editBookId) return
 
-        fetch(`http://localhost:5009/api/Book/${editBookId}`)
+        fetch(`http://localhost:5009/api/Book/${editBookId}`, {
+            headers: {
+                'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
+                'Content-Type': 'application/json'
+            }
+        })
             .then(res => {
                 if (!res.ok) throw new Error("Network response was not ok");
                 return res.json();
@@ -42,6 +47,7 @@ function UpdateBook({ editBookId }) {
         fetch(`http://localhost:5009/api/Book/${editBookId}`, {
             method: "PUT",
             headers: {
+                'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(book)

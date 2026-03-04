@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
+import { data, Link } from "react-router-dom";
+import "../css/BookCatalogue.css";
 
-function BookCatalogue({ onViewMore }) {
+function BookCatalogue() {
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -10,7 +12,12 @@ function BookCatalogue({ onViewMore }) {
             setLoading(true);
 
             try {
-                const res = await fetch('http://localhost:5009/api/Book')
+                const res = await fetch('http://localhost:5009/api/Book', {
+                    headers: {
+                        'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
+                        'Content-Type': 'application/json'
+                    }
+                })
 
                 if (!res.ok)
                     throw new Error("No Response")
@@ -23,25 +30,25 @@ function BookCatalogue({ onViewMore }) {
                 setLoading(false);
             }
         }
-
         fetchBooks();
     }, []);
 
     return (
-        <div className="container-fluid p-5 min-vh-100 align-content-center border">
-            <div className="row g-2">
+        <div className="p-5 min-vh-100">
+            <div className="row g-4">
                 {books.map(book => (
-                    <div className="col" key={book.bookId}>
-                        <div className="card">
-                            <div className="card-body">
-                                <p>{book.title}</p>
+                    <div className="col-2" key={book.bookId}>
+                        <div className="card h-100">
+                            <img className="card-image rounded" />
+                            <div className="card-body d-flex flex-column">
+                                <h5>{book.title}</h5>
                                 <p>{book.author}</p>
-                                <button className="btn btn-primary">Borrow</button>
-                                <button className="btn btn-secondary" onClick={() => {
-                                    onViewMore(book.bookId)
-                                }}>
-                                    More..
-                                </button>
+                                <div className="card-button mt-auto">
+                                    <button className="btn btn-primary me-2">Borrow</button>
+                                    <Link className="btn btn-secondary" to={`/catalogue/book/${book.bookId}`}>
+                                        View
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>

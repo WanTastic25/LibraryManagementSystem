@@ -182,6 +182,7 @@ C:\Users\wanas\source\repos\LibraryManagementSystem\backend\bin\Debug\net8.0\Lib
 C:\Users\wanas\source\repos\LibraryManagementSystem\backend\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\wanas\source\repos\LibraryManagementSystem\backend\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\wanas\source\repos\LibraryManagementSystem\backend\bin\Debug\net8.0\Humanizer.dll
+C:\Users\wanas\source\repos\LibraryManagementSystem\backend\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\wanas\source\repos\LibraryManagementSystem\backend\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\wanas\source\repos\LibraryManagementSystem\backend\bin\Debug\net8.0\Microsoft.Build.Locator.dll
 C:\Users\wanas\source\repos\LibraryManagementSystem\backend\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll

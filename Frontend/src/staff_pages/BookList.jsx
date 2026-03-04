@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { Link } from "react-router-dom";
 
 function BookList({ onEdit }) {
     const [books, setBooks] = useState([]);
@@ -9,7 +10,12 @@ function BookList({ onEdit }) {
         function fetchBook() {
             setLoading(true);
 
-            fetch("http://localhost:5009/api/Book")
+            fetch("http://localhost:5009/api/Book", {
+                headers: {
+                    'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
+                    'Content-Type': 'application/json'
+                }
+            })
                 .then(res => {
                     if (!res.ok) throw new Error("Network response was not ok");
                     return res.json();
@@ -51,11 +57,9 @@ function BookList({ onEdit }) {
                                 <td>{book.title}</td>
                                 <td>{book.author}</td>
                                 <td>
-                                    <button className="btn btn-primary" onClick={() => {
-                                        onEdit(book.bookId)
-                                    }}>
+                                    <Link className="btn btn-primary" to={`/book-list/book/${book.bookId}`}>
                                         Edit
-                                    </button>
+                                    </Link>
                                 </td>
                             </tr>
                         ))}

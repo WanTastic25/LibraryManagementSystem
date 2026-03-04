@@ -10,6 +10,7 @@ import AddBook from './staff_pages/AddBook.jsx'
 import AddUser from './admin_only_pages/AddUser.jsx'
 import UserList from './admin_only_pages/UserList.jsx'
 import UpdateUser from './admin_only_pages/UpdateUser.jsx'
+import PrivateRoute from "./private_route.jsx";
 
 function App() {
     const [bookId, setBookId] = useState(null)
@@ -23,23 +24,18 @@ function App() {
                 <Route path="/" element={<Navigate to="/login" />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
-                <Route path="/catalogue" element={<BookCatalogue />} />
-                <Route path="/book-list" element={<BookList />} />
+
+                <Route element={<PrivateRoute requiredRole="Member" />}>
+                    <Route path="/catalogue" element={<BookCatalogue />} />
+                    <Route path="/catalogue/book/:bookId" element={<BookDetails />} />
+                </Route>
+
+                <Route element={<PrivateRoute requiredRole="Admin" />}>
+                    <Route path="/book-list" element={<BookList />} />
+                    <Route path="/book-list/book/:bookId" element={<UpdateBook />} />
+                </Route>
             </Routes>
         </Router>
-
-        /*<div>
-            <Login />
-            <Register />
-            <BookCatalogue onViewMore={setBookId} />
-            <BookDetails bookId={bookId} />
-            <BookList onEdit={setEditBookId} />
-            <UpdateBook editBookId={editBookId} />
-            <AddBook />
-            <AddUser />
-            <UserList onEdit={setEditUserId} />
-            <UpdateUser editUserId={editUserId}/>
-        </div>*/
     )
 }
 

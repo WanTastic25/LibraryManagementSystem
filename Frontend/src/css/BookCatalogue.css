@@ -1,0 +1,14 @@
+.card {
+    min-height: 250px;
+    max-height: 500px;
+}
+
+.card-image {
+    background-color: lightgray;
+    min-height: 200px;
+}
+
+.card-button {
+    display: flex;
+    align-items: end;
+}

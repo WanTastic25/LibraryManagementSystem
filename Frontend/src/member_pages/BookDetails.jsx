@@ -1,14 +1,21 @@
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom";
 
-function BookDetails({ bookId }) {
+function BookDetails() {
+    const { bookId } = useParams();
     const [book, setBook] = useState(null)
-    
+
     useEffect(() => {
         if (!bookId) return;
 
         const fetchBook = async () => {
             try {
-                const res = await fetch(`http://localhost:5009/api/Book/${bookId}`);
+                const res = await fetch(`http://localhost:5009/api/Book/${bookId}`, {
+                    headers: {
+                        'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
                 if (!res.ok) throw new Error("Id not found");
 
                 const data = await res.json();

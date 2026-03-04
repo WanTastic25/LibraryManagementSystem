@@ -4,9 +4,11 @@ using LibraryManagementSystem.Models.Entities;
 using LibraryManagementSystem.Models.BookDto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LibraryManagementSystem.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BookController : Controller
@@ -18,26 +20,12 @@ namespace LibraryManagementSystem.Controllers
             this.dbContext = dbContext;
         }
 
+        [Authorize(Roles = "Admin, Member")]
         [HttpGet]
         public async Task<IActionResult> GetAllBooks()
         {
             var allBooks = await dbContext.Books.ToListAsync();
             return Ok(allBooks);
-        }
-
-        [HttpGet("catalogue")]
-        public async Task<ActionResult<IEnumerable<MemberBookCatalogueDto>>> GetCatalogueBooks()
-        {
-            var books = await dbContext.Books
-                .Select(b => new MemberBookCatalogueDto
-                {
-                    ISBN = b.ISBN,
-                    Title = b.Title,
-                    Author = b.Author
-                })
-        .ToListAsync();
-
-            return Ok(books);
         }
 
         [HttpGet]

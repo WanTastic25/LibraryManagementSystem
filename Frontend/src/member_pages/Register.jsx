@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Navigate, Link } from "react-router-dom";
 
 function Register() {
     const emailRef = useRef();
@@ -25,22 +26,31 @@ function Register() {
 
         const data = await res.json();
         alert("Account Created!");
+        Navigate("/login");
     }
 
     return (
-        <div className="tableCard d-flex justify-content-center flex-column border shadow p-5 m-5">
-            <form onSubmit={register} className="d-flex justify-content-center flex-column">
-                <label htmlFor="">Email:</label>
-                <input type="text" ref={emailRef} />
+        <div className="d-flex justify-content-center min-vh-100 align-items-center">
+            <div>
+                <h1>Become a Member today!</h1>
+                <p>LMS provide special benefits and services to its members, so sign up today!</p>
+            </div>
+            <div className="tableCard border shadow p-5 m-5 rounded">
+                <h1 className="mb-3">Register</h1>
+                <form onSubmit={register} className="d-flex justify-content-center flex-column">
+                    <label>Email:</label>
+                    <input className="form-control" type="text" ref={emailRef} />
 
-                <label htmlFor="">Password:</label>
-                <input type="password" ref={passwordRef} />
+                    <label>Password:</label>
+                    <input className="form-control" type="password" ref={passwordRef} />
 
-                <label htmlFor="">Name:</label>
-                <input type="name" ref={nameRef} />
+                    <label>Name:</label>
+                    <input className="form-control" type="name" ref={nameRef} />
 
-                <button className="btn btn-primary mt-3" type="submit">Register</button>
-            </form>
+                    <button className="btn btn-success mt-3" type="submit">Register</button>
+                    <Link to={`/login`} className="mt-3">Return to login</Link>
+                </form>
+            </div>
         </div>
     )
 }

@@ -1,4 +1,5 @@
 ﻿using LibraryManagementSystem.Data;
+using LibraryManagementSystem.Helpers;
 using LibraryManagementSystem.Models.Entities;
 using LibraryManagementSystem.Models.UserDto;
 using Microsoft.AspNetCore.Mvc;
@@ -13,10 +14,12 @@ namespace LibraryManagementSystem.Controllers
     public class AuthController : Controller
     {
         private readonly ApplicationDbContext dbContext;
+        private readonly JwtService jwtService; 
 
-        public AuthController(ApplicationDbContext dbContext)
+        public AuthController(ApplicationDbContext dbContext, JwtService jwtService)
         {
             this.dbContext = dbContext;
+            this.jwtService = jwtService;
         }
 
         private string GenerateSalt()
@@ -63,7 +66,6 @@ namespace LibraryManagementSystem.Controllers
 
             return Ok(user);
         }
-
         
         [HttpPost("login")]
         public async Task<IActionResult> LoginUser(LoginUserDto loginUserDto)
@@ -76,13 +78,9 @@ namespace LibraryManagementSystem.Controllers
             if (hash != user.Password)
                 return Unauthorized("Invalid password");
 
-            return Ok(new
-            {
-                message = "Login successful",
-                userId = user.Id,
-                userName = user.Name,
-                userRole = user.Role
-            });
+            var token = jwtService.Generate(user.Id, user.Role);
+
+            return Ok(new { token });
         }
 
     }
