@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\helpers\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\helpers\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Migrations\\20260305053853_SynopsisUpdateForBookTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Backend\\Migrations\\20260305053853_SynopsisUpdateForBookTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\helpers\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\helpers\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +38,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "20260305053853_SynopsisUpdateForBookTable.cs",
+              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Migrations\\20260305053853_SynopsisUpdateForBookTable.cs",
+              "RelativeDocumentMoniker": "Backend\\Migrations\\20260305053853_SynopsisUpdateForBookTable.cs",
+              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Migrations\\20260305053853_SynopsisUpdateForBookTable.cs",
+              "RelativeToolTip": "Backend\\Migrations\\20260305053853_SynopsisUpdateForBookTable.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T05:38:53.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\appsettings.json",
               "RelativeDocumentMoniker": "Backend\\appsettings.json",
@@ -46,25 +63,24 @@
               "RelativeToolTip": "Backend\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-04T09:21:49.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T09:21:49.576Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "BookController.cs",
               "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Controllers\\BookController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\BookController.cs",
               "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Controllers\\BookController.cs",
               "RelativeToolTip": "Backend\\Controllers\\BookController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-04T08:42:09.902Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\UserController.cs",
@@ -77,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Program.cs",
               "RelativeDocumentMoniker": "Backend\\Program.cs",
@@ -90,26 +106,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "JwtService.cs",
               "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Helpers\\JwtService.cs",
               "RelativeDocumentMoniker": "Backend\\Helpers\\JwtService.cs",
               "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Helpers\\JwtService.cs",
               "RelativeToolTip": "Backend\\Helpers\\JwtService.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAwBAAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwAwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-04T05:19:45.646Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Backend\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAkwFIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAkwEsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-04T05:11:48.307Z",
               "EditorCaption": ""

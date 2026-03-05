@@ -24,6 +24,7 @@ function BookCatalogue() {
 
                 const data = await res.json();
                 setBooks(data);
+                setLoading(false);
 
             } catch (err) {
                 setError(err.message);
@@ -32,6 +33,12 @@ function BookCatalogue() {
         }
         fetchBooks();
     }, []);
+
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error}</div>;
+    if (books.length === 0) {
+        return <p>No books available.</p>;
+    }
 
     return (
         <div className="p-5 min-vh-100">

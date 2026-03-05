@@ -1,7 +1,8 @@
 import { useRef } from "react";
-import { Navigate, Link } from "react-router-dom";
+import { Navigate, Link, useNavigate } from "react-router-dom";
 
 function Register() {
+    const navigate = useNavigate();
     const emailRef = useRef();
     const passwordRef = useRef();
     const nameRef = useRef();
@@ -21,12 +22,15 @@ function Register() {
             body: JSON.stringify(registerData)
         });
 
-        if (!res.ok)
-            throw new Error(err);
+        if (!res.ok) {
+            const errorMessage = await res.text();
+            alert("Error: " + errorMessage);
+            throw new Error(errorMessage);            
+        }
 
         const data = await res.json();
         alert("Account Created!");
-        Navigate("/login");
+        navigate("/login");
     }
 
     return (

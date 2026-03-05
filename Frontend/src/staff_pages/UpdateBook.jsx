@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-function UpdateBook({ editBookId }) {
+function UpdateBook() {
+    const { bookId } = useParams();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [book, setBook] = useState({
@@ -11,9 +13,12 @@ function UpdateBook({ editBookId }) {
     });
 
     useEffect(() => {
-        if (!editBookId) return
+        if (!bookId) {
+            alert("Error: No book selected to edit!");
+            return;
+        }
 
-        fetch(`http://localhost:5009/api/Book/${editBookId}`, {
+        fetch(`http://localhost:5009/api/Book/${bookId}`, {
             headers: {
                 'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
                 'Content-Type': 'application/json'
@@ -31,7 +36,7 @@ function UpdateBook({ editBookId }) {
                 setError(err.message);
                 setLoading(false);
             });
-    }, [editBookId]);
+    }, [bookId]);
 
     function handleChange(e) {
         const { name, value } = e.target;
@@ -44,7 +49,7 @@ function UpdateBook({ editBookId }) {
     function handleSubmit(e) {
         e.preventDefault();
 
-        fetch(`http://localhost:5009/api/Book/${editBookId}`, {
+        fetch(`http://localhost:5009/api/Book/${bookId}`, {
             method: "PUT",
             headers: {
                 'Authorization': `Bearer ${sessionStorage.getItem('token')}`,

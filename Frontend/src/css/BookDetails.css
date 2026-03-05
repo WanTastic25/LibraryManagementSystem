@@ -1,0 +1,27 @@
+.BookDetail {
+    background-color: lightgray;
+}
+
+.BookDetailImage {
+    margin-right: 25px;
+    width: 400px;
+    height: 600px;
+}
+
+.BookDetailCard {
+    background-color: white;
+}
+
+.BookDetailContent {
+    width: 500px;
+    height: 600px;
+}
+
+.BookDetailTitle {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.BookDetailAuthor {
+    font-size: 15px;
+}

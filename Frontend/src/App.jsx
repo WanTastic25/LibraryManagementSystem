@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { useState, useEffect } from 'react'
 import Login from './Login.jsx'
 import BookCatalogue from './member_pages/BookCatalogue.jsx'
 import Register from './member_pages/Register.jsx'
@@ -11,15 +11,26 @@ import AddUser from './admin_only_pages/AddUser.jsx'
 import UserList from './admin_only_pages/UserList.jsx'
 import UpdateUser from './admin_only_pages/UpdateUser.jsx'
 import PrivateRoute from "./private_route.jsx";
+import Navbar from "./Navbar.jsx";
 
 function App() {
-    const [bookId, setBookId] = useState(null)
-    const [editBookId, setEditBookId] = useState(null)
-    const [editUserId, setEditUserId] = useState(null)
-    const currentUser = JSON.parse(sessionStorage.getItem("user"))
+    //Navbar setup a condition to see if current path is login or registration then use that for navbar render
+
+    const [role, setRole] = useState(null);
+
+    useEffect(() => {
+        const token = sessionStorage.getItem("token");
+
+        if (token) {
+            const payload = JSON.parse(atob(token.split(".")[1]));
+            const roleClaim = payload["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
+            setRole(roleClaim);
+        }
+    }, []);
 
     return (
         <Router>
+            <Navbar role={role} />
             <Routes>
                 <Route path="/" element={<Navigate to="/login" />} />
                 <Route path="/login" element={<Login />} />
@@ -33,6 +44,7 @@ function App() {
                 <Route element={<PrivateRoute requiredRole="Admin" />}>
                     <Route path="/book-list" element={<BookList />} />
                     <Route path="/book-list/book/:bookId" element={<UpdateBook />} />
+                    <Route path="/add-book" element={<AddBook />} />
                 </Route>
             </Routes>
         </Router>

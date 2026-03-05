@@ -5,6 +5,7 @@ function AddBook() {
     const titleRef = useRef();
     const authorRef = useRef();
     const copyRef = useRef();
+    const synopsisRef = useRef();
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -13,13 +14,17 @@ function AddBook() {
             ISBN: isbnRef.current.value,
             Title: titleRef.current.value,
             Author: authorRef.current.value,
+            Synopsis: synopsisRef.current.value,
             Copies: Number(copyRef.current.value)
         }
 
         try {
             const response = await fetch("http://localhost:5009/api/Book", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: {
+                    'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
+                    "Content-Type": "application/json"
+                },
                 body: JSON.stringify(bookData),
             });
 
@@ -49,6 +54,11 @@ function AddBook() {
                 <div>
                     <label className="form-label">Author:</label>
                     <input className="form-control" type="text" ref={authorRef} placeholder="Author name" required />
+                </div>
+
+                <div>
+                    <label className="form-label">Synopsis:</label>
+                    <textarea className="form-control" type="text" ref={synopsisRef} placeholder="Synopsis" rows={4}/>
                 </div>
 
                 <div>

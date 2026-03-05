@@ -36,7 +36,7 @@ function BookList({ onEdit }) {
     return (
         <div className="tableCard d-flex justify-content-center flex-column p-5 m-5">
             <div className="tableTitle">
-                <h1 className="basicText">Books In Db</h1>
+                <h1 className="basicText">Books In Database</h1>
             </div>
             <div className="tableContainer">
                 <table className="table table-dark table-striped mb-0">

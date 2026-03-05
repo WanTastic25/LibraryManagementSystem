@@ -10,6 +10,7 @@ namespace LibraryManagementSystem.Models.Entities
         public required string Title { get; set; }
         public required string Author { get; set; }
         public required int Copies { get; set; }
+        public string? Synopsis { get; set; }
         [JsonIgnore] public ICollection<BorrowedBook>? BorrowedBooks { get; set; }
     }
 }

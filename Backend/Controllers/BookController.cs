@@ -48,6 +48,7 @@ namespace LibraryManagementSystem.Controllers
                 ISBN = addBookDto.ISBN,
                 Title = addBookDto.Title,
                 Author = addBookDto.Author,
+                Synopsis = addBookDto.Synopsis,
                 Copies = addBookDto.Copies,
             };
 
@@ -68,6 +69,7 @@ namespace LibraryManagementSystem.Controllers
                 book.ISBN = updateBookDto.ISBN;
                 book.Title = updateBookDto.Title;
                 book.Author = updateBookDto.Author;
+                book.Synopsis = updateBookDto.Synopsis;
                 book.Copies = updateBookDto.Copies;
 
                 await dbContext.SaveChangesAsync();
@@ -82,7 +84,7 @@ namespace LibraryManagementSystem.Controllers
 
         [HttpDelete]
         [Route("{bookId:guid}")]
-        public async Task<IActionResult> DeleteHero(Guid bookId)
+        public async Task<IActionResult> DeleteBook(Guid bookId)
         {
             var book = await dbContext.Books.FindAsync(bookId);
 
