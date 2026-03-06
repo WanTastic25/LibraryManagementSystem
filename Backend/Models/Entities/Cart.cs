@@ -6,9 +6,8 @@ namespace LibraryManagementSystem.Models.Entities
 {
     public class Cart
     {
-        [Key] public Guid Id { get; set; }
+        [Key] public Guid cartId { get; set; }
         public Guid userId { get; set; }
-        [JsonIgnore] public User User {get; set;}
         public List<CartItem> CartItems { get; set; } = new List<CartItem>();
     }
 }

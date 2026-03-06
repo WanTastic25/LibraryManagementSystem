@@ -20,7 +20,6 @@ function BookDetails() {
                 if (!res.ok) throw new Error("Id not found");
 
                 const data = await res.json();
-                console.log("HELLO");
                 setBook(data);
             } catch (err) {
                 console.error(err);
@@ -44,7 +43,7 @@ function BookDetails() {
                         By {book?.author}
                     </div>
                     <div className="BookDetailSynopsis">
-
+                        {book?.synopsis}
                     </div>
                     <div className="BookDetailButtons mt-3">
                     </div>

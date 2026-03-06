@@ -96,7 +96,7 @@
   },
   {
     "ContainingType": "LibraryManagementSystem.Controllers.BookController",
-    "Method": "DeleteHero",
+    "Method": "DeleteBook",
     "RelativePath": "api/Book/{bookId}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -109,26 +109,6 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LibraryManagementSystem.Controllers.BookController",
-    "Method": "GetCatalogueBooks",
-    "RelativePath": "api/Book/catalogue",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[LibraryManagementSystem.Models.BookDto.MemberBookCatalogueDto, LibraryManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
   },
   {
     "ContainingType": "LibraryManagementSystem.Controllers.BorrowedBookController",
@@ -174,12 +154,44 @@
   },
   {
     "ContainingType": "LibraryManagementSystem.Controllers.CartController",
-    "Method": "CreateCart",
+    "Method": "AddToCart",
     "RelativePath": "api/Cart",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addToCartDto",
+        "Type": "LibraryManagementSystem.Models.CartDto.AddToCartDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.CartController",
+    "Method": "GetCart",
+    "RelativePath": "api/Cart",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.CartController",
+    "Method": "RemoveItem",
+    "RelativePath": "api/Cart/{cartItemId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartItemId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

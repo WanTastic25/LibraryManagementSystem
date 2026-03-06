@@ -11,6 +11,7 @@ namespace LibraryManagementSystem.Models.Entities
         public string PasswordSalt { get; set; }
         [Required] public string Name { get; set; }
         [Required] public string Role { get; set; }
+        public Cart cart { get; set; }
         public bool Warning { get; set; } = false;
         [JsonIgnore] public ICollection<BorrowedBook>? BorrowedBooks { get; set; }
     }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { data, Link } from "react-router-dom";
 import "../css/BookCatalogue.css";
+import BorrowButton from "./BorrowButton";
 
 function BookCatalogue() {
     const [books, setBooks] = useState([]);
@@ -51,7 +52,7 @@ function BookCatalogue() {
                                 <h5>{book.title}</h5>
                                 <p>{book.author}</p>
                                 <div className="card-button mt-auto">
-                                    <button className="btn btn-primary me-2">Borrow</button>
+                                    <BorrowButton bookId={book.bookId}/>
                                     <Link className="btn btn-secondary" to={`/catalogue/book/${book.bookId}`}>
                                         View
                                     </Link>

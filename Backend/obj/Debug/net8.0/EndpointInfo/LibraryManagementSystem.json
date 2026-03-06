@@ -108,44 +108,6 @@
         }
       }
     },
-    "/api/Book/catalogue": {
-      "get": {
-        "tags": [
-          "Book"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MemberBookCatalogueDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MemberBookCatalogueDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MemberBookCatalogueDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/Book/{bookId}": {
       "get": {
         "tags": [
@@ -298,6 +260,58 @@
       "post": {
         "tags": [
           "Cart"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddToCartDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddToCartDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddToCartDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Cart"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Cart/{cartItemId}": {
+      "delete": {
+        "tags": [
+          "Cart"
+        ],
+        "parameters": [
+          {
+            "name": "cartItemId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -457,6 +471,10 @@
             "type": "string",
             "nullable": true
           },
+          "synopsis": {
+            "type": "string",
+            "nullable": true
+          },
           "copies": {
             "type": "integer",
             "format": "int32"
@@ -489,6 +507,20 @@
           },
           "isOverdue": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddToCartDto": {
+        "type": "object",
+        "properties": {
+          "bookId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "bookQuantity": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -541,29 +573,6 @@
         },
         "additionalProperties": false
       },
-      "MemberBookCatalogueDto": {
-        "required": [
-          "author",
-          "isbn",
-          "title"
-        ],
-        "type": "object",
-        "properties": {
-          "isbn": {
-            "type": "string",
-            "nullable": true
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "author": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "RegisterMemberDto": {
         "required": [
           "email",
@@ -606,6 +615,10 @@
             "nullable": true
           },
           "author": {
+            "type": "string",
+            "nullable": true
+          },
+          "synopsis": {
             "type": "string",
             "nullable": true
           },

@@ -18,7 +18,8 @@ function Navbar({ role }) {
 
                 {role === "Member" && (
                     <>
-                        <li className="nav-item"><Link className="nav-link text-white" to="#">My Cart</Link></li>
+                        <li className="nav-item"><Link className="nav-link text-white" to="/cart">My Cart</Link></li>
+                        <li className="nav-item"><Link className="nav-link text-white" to="/catalogue">Catalogue</Link></li>
                     </>
                 )}
             </ul>
