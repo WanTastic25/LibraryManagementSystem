@@ -22,12 +22,13 @@ function BorrowButton({ bookId }) {
                 return;
             }
 
+            alert("Book Added to Cart");
+
         } catch {
             console.error(err);
             alert("borrow book failed");
         }
     };
-
 
     return (
         <div>

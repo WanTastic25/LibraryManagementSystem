@@ -61,6 +61,8 @@ namespace LibraryManagementSystem
             }
 
             // app.UseHttpsRedirection();
+            
+            app.UseStaticFiles();
 
             app.UseCors();
 

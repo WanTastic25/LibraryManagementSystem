@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 namespace LibraryManagementSystem.Models.Entities
@@ -11,6 +12,7 @@ namespace LibraryManagementSystem.Models.Entities
         public required string Author { get; set; }
         public required int Copies { get; set; }
         public string? Synopsis { get; set; }
+        public string? ImageUrl { get; set; }
         [JsonIgnore] public ICollection<BorrowedBook>? BorrowedBooks { get; set; }
     }
 }

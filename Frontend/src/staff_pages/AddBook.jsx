@@ -6,26 +6,29 @@ function AddBook() {
     const authorRef = useRef();
     const copyRef = useRef();
     const synopsisRef = useRef();
+    const imageRef = useRef();
 
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        const bookData = {
-            ISBN: isbnRef.current.value,
-            Title: titleRef.current.value,
-            Author: authorRef.current.value,
-            Synopsis: synopsisRef.current.value,
-            Copies: Number(copyRef.current.value)
-        }
+        const imageFile = imageRef.current.files[0];
+
+        const bookData = new FormData();
+        bookData.append("ISBN", isbnRef.current.value);
+        bookData.append("Title", titleRef.current.value);
+        bookData.append("Author", authorRef.current.value);
+        bookData.append("Synopsis", synopsisRef.current.value || "");
+        bookData.append("Copies", copyRef.current.value);
+        if (imageFile) bookData.append("Image", imageFile);
+
 
         try {
             const response = await fetch("http://localhost:5009/api/Book", {
                 method: "POST",
                 headers: {
                     'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
-                    "Content-Type": "application/json"
                 },
-                body: JSON.stringify(bookData),
+                body: bookData,
             });
 
             if (!response.ok) throw new Error("Failed to add book");
@@ -58,12 +61,17 @@ function AddBook() {
 
                 <div>
                     <label className="form-label">Synopsis:</label>
-                    <textarea className="form-control" type="text" ref={synopsisRef} placeholder="Synopsis" rows={4}/>
+                    <textarea className="form-control" type="text" ref={synopsisRef} placeholder="Synopsis" rows={4} />
                 </div>
 
                 <div>
                     <label className="form-label">Copies:</label>
                     <input className="form-control" type="number" ref={copyRef} placeholder="0" required />
+                </div>
+
+                <div>
+                    <label className="form-label">Image:</label>
+                    <input className="form-control" ref={imageRef} type="file" />
                 </div>
 
                 <button className="btn btn-success mt-3" type="submit">Add Book</button>

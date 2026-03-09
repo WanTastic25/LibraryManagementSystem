@@ -46,8 +46,8 @@ function BookCatalogue() {
             <div className="row g-4">
                 {books.map(book => (
                     <div className="col-2" key={book.bookId}>
-                        <div className="card h-100">
-                            <img className="card-image rounded" />
+                        <div className="card p-1 h-100">
+                            <img className="card-image rounded" src={`http://localhost:5009${book.imageUrl}`} alt={book.title}/>
                             <div className="card-body d-flex flex-column">
                                 <h5>{book.title}</h5>
                                 <p>{book.author}</p>

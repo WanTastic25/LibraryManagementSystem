@@ -5,7 +5,8 @@
 
 .card-image {
     background-color: lightgray;
-    min-height: 200px;
+    min-height: 300px;
+    max-height: 300px;
 }
 
 .card-button {

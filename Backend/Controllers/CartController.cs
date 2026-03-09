@@ -29,7 +29,7 @@ namespace LibraryManagementSystem.Controllers
         public async Task<IActionResult> AddToCart(AddToCartDto addToCartDto)
         {
             var userId = GetUserId();
-            
+
             var cart = await dbContext.Carts
                 .Include(c => c.CartItems)
                 .FirstOrDefaultAsync(c => c.userId == userId);
@@ -39,13 +39,14 @@ namespace LibraryManagementSystem.Controllers
                 cart = new Cart
                 {
                     cartId = Guid.NewGuid(),
-                    userId = userId
+                    userId = userId,
                 };
 
                 dbContext.Carts.Add(cart);
             }
 
-            var existingItem = await dbContext.CartItems.FirstOrDefaultAsync(i => i.bookId == addToCartDto.bookId);
+            var existingItem = cart.CartItems
+                .SingleOrDefault(i => i.bookId == addToCartDto.bookId);
 
             if (existingItem != null)
             {
@@ -61,7 +62,7 @@ namespace LibraryManagementSystem.Controllers
                     bookQuantity = 1
                 };
 
-                cart.CartItems.Add(cartItem);
+                dbContext.CartItems.Add(cartItem);
             }
 
             await dbContext.SaveChangesAsync();
@@ -98,7 +99,7 @@ namespace LibraryManagementSystem.Controllers
 
             await dbContext.SaveChangesAsync();
 
-            return Ok("Item Removed");
+            return Ok(new { message = "Book Deleted" });
         }
     }
 }

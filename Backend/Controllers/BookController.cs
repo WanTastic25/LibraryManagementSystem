@@ -41,8 +41,23 @@ namespace LibraryManagementSystem.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddBook(AddBookDto addBookDto)
+        public async Task<IActionResult> AddBook([FromForm] AddBookDto addBookDto)
         {
+            string? imageUrl = null;
+
+            if (addBookDto.Image != null)
+            {
+                var fileName = Guid.NewGuid() + Path.GetExtension(addBookDto.Image.FileName);
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/bookCover", fileName);
+
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await addBookDto.Image.CopyToAsync(stream);
+                }
+
+                imageUrl = "/images/bookCover/" + fileName;
+            }
+
             var book = new Book()
             {
                 ISBN = addBookDto.ISBN,
@@ -50,6 +65,7 @@ namespace LibraryManagementSystem.Controllers
                 Author = addBookDto.Author,
                 Synopsis = addBookDto.Synopsis,
                 Copies = addBookDto.Copies,
+                ImageUrl = imageUrl,
             };
 
             await dbContext.Books.AddAsync(book);
@@ -60,12 +76,25 @@ namespace LibraryManagementSystem.Controllers
 
         [HttpPut]
         [Route("{bookId:guid}")]
-        public async Task<IActionResult> UpdateBook(Guid bookId, UpdateBookDto updateBookDto)
+        public async Task<IActionResult> UpdateBook(Guid bookId, [FromForm] UpdateBookDto updateBookDto)
         {
             var book = await dbContext.Books.FindAsync(bookId);
 
             if (book is not null)
             {
+                if (updateBookDto.Image != null)
+                {
+                    var fileName = Guid.NewGuid() + Path.GetExtension(updateBookDto.Image.FileName);
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/bookCover", fileName);
+
+                    using (var stream = new FileStream(path, FileMode.Create))
+                    {
+                        await updateBookDto.Image.CopyToAsync(stream);
+                    }
+
+                    book.ImageUrl = "/images/bookCover/" + fileName;
+                }
+
                 book.ISBN = updateBookDto.ISBN;
                 book.Title = updateBookDto.Title;
                 book.Author = updateBookDto.Author;

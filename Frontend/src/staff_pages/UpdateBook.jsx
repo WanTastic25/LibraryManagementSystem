@@ -5,11 +5,14 @@ function UpdateBook() {
     const { bookId } = useParams();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [imageFile, setImageFile] = useState(null);
     const [book, setBook] = useState({
         isbn: "",
         title: "",
         author: "",
-        copies: ""
+        copies: "",
+        synopsis: "",
+        imageUrl: "",
     });
 
     useEffect(() => {
@@ -46,23 +49,38 @@ function UpdateBook() {
         }));
     }
 
+    const handleImageChange = (e) => {
+        setImageFile(e.target.files[0]);
+    };
+
     function handleSubmit(e) {
         e.preventDefault();
+
+        const formData = new FormData();
+        formData.append("ISBN", book.isbn);
+        formData.append("Title", book.title);
+        formData.append("Author", book.author);
+        formData.append("Synopsis", book.synopsis);
+        formData.append("Copies", Number(book.copies));
+        if (imageFile) formData.append("Image", imageFile);
 
         fetch(`http://localhost:5009/api/Book/${bookId}`, {
             method: "PUT",
             headers: {
                 'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
-                "Content-Type": "application/json"
             },
-            body: JSON.stringify(book)
+            body: formData,
         })
-            .then(res => {
-                if (!res.ok) throw new Error("Update failed");
+            .then(async res => {
+                if (!res.ok) {
+                    const text = await res.text();
+                    throw new Error(text || "Update failed");
+                }
                 return res.json();
             })
             .then(() => {
                 alert("Book updated!");
+                window.location.reload();
             })
             .catch(err => alert(err.message));
     }
@@ -72,7 +90,13 @@ function UpdateBook() {
 
     return (
         <div className="tableCard d-flex justify-content-center flex-column p-5 m-5">
+            <h2>Update Book</h2>
             <form onSubmit={handleSubmit}>
+                <div className="d-flex flex-column">
+                    <label className="form-label">Current Image</label>
+                    <img className="mb-3" width={300} src={`http://localhost:5009${book.imageUrl}`} alt="current image" />
+                </div>
+
                 <div>
                     <label className="form-label">ISBN</label>
                     <input
@@ -107,6 +131,18 @@ function UpdateBook() {
                 </div>
 
                 <div>
+                    <label className="form-label" >Synopsis</label>
+                    <textarea
+                        className="form-control"
+                        type="text"
+                        name="synopsis"
+                        rows={4}
+                        value={book.synopsis}
+                        onChange={handleChange}
+                    />
+                </div>
+
+                <div>
                     <label className="form-label" >Copies</label>
                     <input
                         className="form-control"
@@ -114,6 +150,16 @@ function UpdateBook() {
                         name="copies"
                         value={book.copies}
                         onChange={handleChange}
+                    />
+                </div>
+
+                <div>
+                    <label className="form-label" >New Image</label>
+                    <input
+                        className="form-control"
+                        type="file"
+                        name="image"
+                        onChange={handleImageChange}
                     />
                 </div>
 

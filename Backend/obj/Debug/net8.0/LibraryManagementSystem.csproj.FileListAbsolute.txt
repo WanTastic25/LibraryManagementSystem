@@ -173,6 +173,7 @@ C:\Users\wanas\source\repos\LibraryManagementSystem\bin\Debug\net8.0\zh-Hant\Mic
 C:\Users\wanas\source\repos\LibraryManagementSystem\obj\Debug\net8.0\LibraryManagementSystem.sourcelink.json
 C:\Users\wanas\source\repos\LibraryManagementSystem\backend\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\wanas\source\repos\LibraryManagementSystem\backend\bin\Debug\net8.0\appsettings.json
+C:\Users\wanas\source\repos\LibraryManagementSystem\backend\bin\Debug\net8.0\LibraryManagementSystem.staticwebassets.runtime.json
 C:\Users\wanas\source\repos\LibraryManagementSystem\backend\bin\Debug\net8.0\LibraryManagementSystem.staticwebassets.endpoints.json
 C:\Users\wanas\source\repos\LibraryManagementSystem\backend\bin\Debug\net8.0\LibraryManagementSystem.exe
 C:\Users\wanas\source\repos\LibraryManagementSystem\backend\bin\Debug\net8.0\LibraryManagementSystem.deps.json
