@@ -1,4 +1,4 @@
-﻿namespace LibraryManagementSystem.Models.CartDto
+﻿namespace LibraryManagementSystem.Models.Dtos.CartDto
 {
     public class AddToCartDto
     {

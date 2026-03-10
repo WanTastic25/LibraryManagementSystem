@@ -1,9 +1,8 @@
-﻿using LibraryManagementSystem.Models.Entities;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace LibraryManagementSystem.Models.UserDto
+namespace LibraryManagementSystem.Models.Dtos.UserDto
 {
-    public class AddUserDto
+    public class UpdateUserDto
     {
         [EmailAddress][Required] public string Email { get; set; }
         [Required] public string Password { get; set; }

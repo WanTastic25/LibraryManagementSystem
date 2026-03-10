@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import "../css/BookDetails.css"
+import BorrowButton from "./BorrowButton";
 
 function BookDetails() {
     const { bookId } = useParams();
@@ -30,22 +31,30 @@ function BookDetails() {
     }, [bookId]);
 
     return (
-        <div className="d-flex justify-content-center min-vh-100 align-items-center BookDetail">
-            <div className="row border rounded shadow p-3 BookDetailCard">
-                <div className="col-auto BookDetailImage border">
-                    
+        <div className="d-flex justify-content-center align-items-center min-vh-100 BookDetail">
+            <div className="row BookDetailCard shadow-lg rounded-4 p-4">
+                <div className="col-md-5 d-flex justify-content-center align-items-center BookDetailImage">
+                    <img
+                        src={`http://localhost:5009${book?.imageUrl}`}
+                        alt={book?.title}
+                        className="img-fluid rounded"
+                    />
                 </div>
-                <div className="col-auto BookDetailContent border p-3">
-                    <div className="BookDetailTitle">
-                        {book?.title};
-                    </div>
-                    <div className="BookDetailAuthor">
+                <div className="col-md-7 BookDetailContent ps-4">
+                    <h2 className="BookDetailTitle">
+                        {book?.title}
+                    </h2>
+                    <p className="BookDetailAuthor text-muted mb-3">
                         By {book?.author}
-                    </div>
-                    <div className="BookDetailSynopsis">
+                    </p>
+
+                    <hr />
+
+                    <p className="BookDetailSynopsis">
                         {book?.synopsis}
-                    </div>
-                    <div className="BookDetailButtons mt-3">
+                    </p>
+                    <div className="mt-4">
+                        <BorrowButton bookId={book?.bookId} />
                     </div>
                 </div>
             </div>

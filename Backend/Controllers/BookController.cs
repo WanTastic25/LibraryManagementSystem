@@ -1,10 +1,10 @@
 ﻿using LibraryManagementSystem.Data;
 using LibraryManagementSystem.Models;
 using LibraryManagementSystem.Models.Entities;
-using LibraryManagementSystem.Models.BookDto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using LibraryManagementSystem.Models.Dtos.BookDto;
 
 namespace LibraryManagementSystem.Controllers
 {
@@ -20,7 +20,7 @@ namespace LibraryManagementSystem.Controllers
             this.dbContext = dbContext;
         }
 
-        [Authorize(Roles = "Admin, Member")]
+        [Authorize(Roles = "Admin, Member, Librarian")]
         [HttpGet]
         public async Task<IActionResult> GetAllBooks()
         {

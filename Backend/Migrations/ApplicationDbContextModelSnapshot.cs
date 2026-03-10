@@ -54,42 +54,38 @@ namespace LibraryManagementSystem.Migrations
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("LibraryManagementSystem.Models.Entities.BorrowedBook", b =>
+            modelBuilder.Entity("LibraryManagementSystem.Models.Entities.BorrowRequest", b =>
                 {
-                    b.Property<Guid>("BorrowId")
+                    b.Property<Guid>("requestId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("BookId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("BorrowDate")
+                    b.Property<DateTime>("PickupDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsOverdue")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsReturned")
-                        .HasColumnType("bit");
-
-                    b.Property<Guid>("LibrarianId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("MemberId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("ReturnDate")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("BorrowId");
+                    b.Property<Guid>("bookId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.HasIndex("BookId");
+                    b.Property<int>("bookQuantity")
+                        .HasColumnType("int");
 
-                    b.HasIndex("LibrarianId");
+                    b.Property<string>("status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("MemberId");
+                    b.Property<Guid>("userId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.ToTable("BorrowedBooks");
+                    b.HasKey("requestId");
+
+                    b.HasIndex("bookId");
+
+                    b.HasIndex("userId");
+
+                    b.ToTable("BorrowRequests");
                 });
 
             modelBuilder.Entity("LibraryManagementSystem.Models.Entities.Cart", b =>
@@ -159,39 +155,28 @@ namespace LibraryManagementSystem.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Warning")
-                        .HasColumnType("bit");
-
                     b.HasKey("Id");
 
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("LibraryManagementSystem.Models.Entities.BorrowedBook", b =>
+            modelBuilder.Entity("LibraryManagementSystem.Models.Entities.BorrowRequest", b =>
                 {
                     b.HasOne("LibraryManagementSystem.Models.Entities.Book", "Book")
-                        .WithMany("BorrowedBooks")
-                        .HasForeignKey("BookId")
+                        .WithMany()
+                        .HasForeignKey("bookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("LibraryManagementSystem.Models.Entities.User", "Librarian")
+                    b.HasOne("LibraryManagementSystem.Models.Entities.User", "User")
                         .WithMany()
-                        .HasForeignKey("LibrarianId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("LibraryManagementSystem.Models.Entities.User", "Member")
-                        .WithMany("BorrowedBooks")
-                        .HasForeignKey("MemberId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .HasForeignKey("userId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Book");
 
-                    b.Navigation("Librarian");
-
-                    b.Navigation("Member");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("LibraryManagementSystem.Models.Entities.Cart", b =>
@@ -222,11 +207,6 @@ namespace LibraryManagementSystem.Migrations
                     b.Navigation("Cart");
                 });
 
-            modelBuilder.Entity("LibraryManagementSystem.Models.Entities.Book", b =>
-                {
-                    b.Navigation("BorrowedBooks");
-                });
-
             modelBuilder.Entity("LibraryManagementSystem.Models.Entities.Cart", b =>
                 {
                     b.Navigation("CartItems");
@@ -234,8 +214,6 @@ namespace LibraryManagementSystem.Migrations
 
             modelBuilder.Entity("LibraryManagementSystem.Models.Entities.User", b =>
                 {
-                    b.Navigation("BorrowedBooks");
-
                     b.Navigation("cart")
                         .IsRequired();
                 });

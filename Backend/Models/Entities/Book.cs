@@ -13,6 +13,5 @@ namespace LibraryManagementSystem.Models.Entities
         public required int Copies { get; set; }
         public string? Synopsis { get; set; }
         public string? ImageUrl { get; set; }
-        [JsonIgnore] public ICollection<BorrowedBook>? BorrowedBooks { get; set; }
     }
 }

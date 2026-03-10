@@ -1,6 +1,6 @@
 using System.Security.Claims;
 using LibraryManagementSystem.Data;
-using LibraryManagementSystem.Models.CartDto;
+using LibraryManagementSystem.Models.Dtos.CartDto;
 using LibraryManagementSystem.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -86,8 +86,45 @@ namespace LibraryManagementSystem.Controllers
             return Ok(cart.CartItems);
         }
 
+        [HttpPut]
+        [Route("{cartItemId:guid}/increase")]
+        public async Task<IActionResult> increaseQuantity(Guid cartItemId)
+        {
+            var item = await dbContext.CartItems.FindAsync(cartItemId);
+
+            if (item == null)
+                return NotFound();
+
+            item.bookQuantity++;
+
+            await dbContext.SaveChangesAsync();
+
+            return Ok(item);
+        }
+
+        [HttpPut]
+        [Route("{cartItemId:guid}/decrease")]
+        public async Task<IActionResult> decreaseQuantity(Guid cartItemId)
+        {
+            var item = await dbContext.CartItems.FindAsync(cartItemId);
+
+            if (item == null)
+                return NotFound();
+
+            item.bookQuantity--;
+
+            if (item.bookQuantity <= 0)
+            {
+                dbContext.CartItems.Remove(item);
+            }
+
+            await dbContext.SaveChangesAsync();
+
+            return Ok(item);
+        }
+
         [HttpDelete]
-        [Route("{cartItemId:guid}")]
+        [Route("item/{cartItemId:guid}")]
         public async Task<IActionResult> RemoveItem(Guid cartItemId)
         {
             var item = await dbContext.CartItems.FindAsync(cartItemId);
@@ -100,6 +137,22 @@ namespace LibraryManagementSystem.Controllers
             await dbContext.SaveChangesAsync();
 
             return Ok(new { message = "Book Deleted" });
+        }
+
+        [HttpDelete]
+        [Route("{cartId:guid}")]
+        public async Task<IActionResult> RemoveCart(Guid cartId)
+        {
+            var item = await dbContext.Carts.FindAsync(cartId);
+
+            if (item == null)
+                return NotFound();
+
+            dbContext.Carts.Remove(item);
+
+            await dbContext.SaveChangesAsync();
+
+            return Ok(new { message = "Cart Deleted" });
         }
     }
 }

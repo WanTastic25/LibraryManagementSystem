@@ -50,9 +50,34 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "addBookDto",
-        "Type": "LibraryManagementSystem.Models.BookDto.AddBookDto",
-        "IsRequired": true
+        "Name": "ISBN",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Image",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Author",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Synopsis",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Copies",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -87,9 +112,34 @@
         "IsRequired": true
       },
       {
-        "Name": "updateBookDto",
-        "Type": "LibraryManagementSystem.Models.BookDto.UpdateBookDto",
-        "IsRequired": true
+        "Name": "ISBN",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Image",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Author",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Synopsis",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Copies",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -104,48 +154,6 @@
     "Parameters": [
       {
         "Name": "bookId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LibraryManagementSystem.Controllers.BorrowedBookController",
-    "Method": "GetAllBorrowedBooks",
-    "RelativePath": "api/BorrowedBook",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LibraryManagementSystem.Controllers.BorrowedBookController",
-    "Method": "AddBorrowedBook",
-    "RelativePath": "api/BorrowedBook",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "addBorrowedBookDto",
-        "Type": "LibraryManagementSystem.Models.BorrowedBookDto.AddBorrowedBookDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LibraryManagementSystem.Controllers.BorrowedBookController",
-    "Method": "returnBorrowedBook",
-    "RelativePath": "api/BorrowedBook/{BorrowId}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "BorrowId",
         "Type": "System.Guid",
         "IsRequired": true
       }
@@ -183,6 +191,38 @@
     "Method": "RemoveItem",
     "RelativePath": "api/Cart/{cartItemId}",
     "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartItemId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.CartController",
+    "Method": "decreaseQuantity",
+    "RelativePath": "api/Cart/{cartItemId}/decrease",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartItemId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.CartController",
+    "Method": "increaseQuantity",
+    "RelativePath": "api/Cart/{cartItemId}/increase",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [

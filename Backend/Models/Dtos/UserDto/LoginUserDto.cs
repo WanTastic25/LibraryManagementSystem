@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace LibraryManagementSystem.Models.UserDto
+namespace LibraryManagementSystem.Models.Dtos.UserDto
 {
     public class LoginUserDto
     {

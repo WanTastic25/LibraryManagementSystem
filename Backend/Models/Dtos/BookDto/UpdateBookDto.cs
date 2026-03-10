@@ -1,6 +1,6 @@
-﻿namespace LibraryManagementSystem.Models.BookDto
+﻿namespace LibraryManagementSystem.Models.Dtos.BookDto
 {
-    public class AddBookDto
+    public class UpdateBookDto
     {
         public required string ISBN { get; set; }
         public IFormFile? Image { get; set; }

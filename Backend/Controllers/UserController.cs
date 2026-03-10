@@ -2,9 +2,9 @@
 using System.Text;
 using LibraryManagementSystem.Data;
 using LibraryManagementSystem.Models;
-using LibraryManagementSystem.Models.BookDto;
+using LibraryManagementSystem.Models.Dtos.BookDto;
+using LibraryManagementSystem.Models.Dtos.UserDto;
 using LibraryManagementSystem.Models.Entities;
-using LibraryManagementSystem.Models.UserDto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -76,7 +76,6 @@ namespace LibraryManagementSystem.Controllers
                 PasswordSalt = passwordSalt,
                 Name = addUserDto.Name,
                 Role = addUserDto.Role,
-                Warning = false,
             };
 
             await dbContext.Users.AddAsync(user);

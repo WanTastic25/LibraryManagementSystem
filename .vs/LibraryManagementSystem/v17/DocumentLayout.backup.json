@@ -3,36 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Migrations\\20260310083551_BorrowRequestUpdate2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Backend\\Migrations\\20260310083551_BorrowRequestUpdate2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\controllers\\borrowrequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\controllers\\borrowrequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\models\\entities\\borrowrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\models\\entities\\borrowrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\models\\bookdto\\addbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\models\\bookdto\\addbookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\models\\bookdto\\updatebookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\models\\bookdto\\updatebookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\models\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\models\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\models\\entities\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\models\\entities\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\models\\entities\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\models\\entities\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\models\\entities\\borrowedbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\models\\entities\\borrowedbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +26,64 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CartItem.cs",
-              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Models\\Entities\\CartItem.cs",
-              "RelativeDocumentMoniker": "Backend\\Models\\Entities\\CartItem.cs",
-              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Models\\Entities\\CartItem.cs",
-              "RelativeToolTip": "Backend\\Models\\Entities\\CartItem.cs",
+              "DocumentIndex": 0,
+              "Title": "20260310083551_BorrowRequestUpdate2.cs",
+              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Migrations\\20260310083551_BorrowRequestUpdate2.cs",
+              "RelativeDocumentMoniker": "Backend\\Migrations\\20260310083551_BorrowRequestUpdate2.cs",
+              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Migrations\\20260310083551_BorrowRequestUpdate2.cs",
+              "RelativeToolTip": "Backend\\Migrations\\20260310083551_BorrowRequestUpdate2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T04:12:01.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Cart.cs",
-              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Models\\Entities\\Cart.cs",
-              "RelativeDocumentMoniker": "Backend\\Models\\Entities\\Cart.cs",
-              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Models\\Entities\\Cart.cs",
-              "RelativeToolTip": "Backend\\Models\\Entities\\Cart.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T04:12:00.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BorrowedBook.cs",
-              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Models\\Entities\\BorrowedBook.cs",
-              "RelativeDocumentMoniker": "Backend\\Models\\Entities\\BorrowedBook.cs",
-              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Models\\Entities\\BorrowedBook.cs",
-              "RelativeToolTip": "Backend\\Models\\Entities\\BorrowedBook.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T04:11:58.08Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Models\\Entities\\Book.cs",
-              "RelativeDocumentMoniker": "Backend\\Models\\Entities\\Book.cs",
-              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Models\\Entities\\Book.cs",
-              "RelativeToolTip": "Backend\\Models\\Entities\\Book.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T04:11:36.945Z",
+              "WhenOpened": "2026-03-10T08:35:51.483Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Program.cs",
-              "RelativeDocumentMoniker": "Backend\\Program.cs",
-              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Program.cs",
-              "RelativeToolTip": "Backend\\Program.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAQwD0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T04:08:54.475Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UpdateBookDto.cs",
-              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Models\\BookDto\\UpdateBookDto.cs",
-              "RelativeDocumentMoniker": "Backend\\Models\\BookDto\\UpdateBookDto.cs",
-              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Models\\BookDto\\UpdateBookDto.cs",
-              "RelativeToolTip": "Backend\\Models\\BookDto\\UpdateBookDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T04:03:15.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddBookDto.cs",
-              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Models\\BookDto\\AddBookDto.cs",
-              "RelativeDocumentMoniker": "Backend\\Models\\BookDto\\AddBookDto.cs",
-              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Models\\BookDto\\AddBookDto.cs",
-              "RelativeToolTip": "Backend\\Models\\BookDto\\AddBookDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T04:03:04.214Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "BookController.cs",
               "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Controllers\\BookController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\BookController.cs",
               "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Controllers\\BookController.cs",
               "RelativeToolTip": "Backend\\Controllers\\BookController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAgwEwAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwEIAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T04:02:26.775Z",
+              "WhenOpened": "2026-03-10T08:01:33.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BorrowRequestController.cs",
+              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Controllers\\BorrowRequestController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\BorrowRequestController.cs",
+              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Controllers\\BorrowRequestController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\BorrowRequestController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T07:09:09.699Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BorrowRequest.cs",
+              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Models\\Entities\\BorrowRequest.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\Entities\\BorrowRequest.cs",
+              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Models\\Entities\\BorrowRequest.cs",
+              "RelativeToolTip": "Backend\\Models\\Entities\\BorrowRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T06:12:32.861Z",
               "EditorCaption": ""
             }
           ]
