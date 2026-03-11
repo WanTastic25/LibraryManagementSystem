@@ -20,6 +20,7 @@ function Navbar({ role }) {
                     <>
                         <li className="nav-item"><Link className="nav-link text-white" to="/cart">My Cart</Link></li>
                         <li className="nav-item"><Link className="nav-link text-white" to="/catalogue">Catalogue</Link></li>
+                        <li className="nav-item"><Link className="nav-link text-white" to="/requests">Requests</Link></li>
                     </>
                 )}
             </ul>

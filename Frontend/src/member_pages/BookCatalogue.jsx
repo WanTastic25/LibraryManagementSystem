@@ -47,12 +47,12 @@ function BookCatalogue() {
                 {books.map(book => (
                     <div className="col-2" key={book.bookId}>
                         <div className="card p-1 h-100">
-                            <img className="card-image rounded" src={`http://localhost:5009${book.imageUrl}`} alt={book.title}/>
+                            <img className="card-image rounded" src={`http://localhost:5009${book.imageUrl}`} alt={book.title} />
                             <div className="card-body d-flex flex-column">
-                                <h5>{book.title}</h5>
-                                <p>{book.author}</p>
+                                <h6 className="fw-bold">{book.title}</h6>
+                                <p className="text-muted small mb-2">{book.author}</p>
                                 <div className="card-button mt-auto">
-                                    <BorrowButton bookId={book.bookId}/>
+                                    <BorrowButton bookId={book.bookId} />
                                     <Link className="btn btn-secondary" to={`/catalogue/book/${book.bookId}`}>
                                         View
                                     </Link>

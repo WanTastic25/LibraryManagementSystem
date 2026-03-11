@@ -14,6 +14,7 @@ import PrivateRoute from "./private_route.jsx";
 import Navbar from "./Navbar.jsx";
 import BorrowButton from "./member_pages/BorrowButton.jsx";
 import BorrowCart from "./member_pages/BorrowCart.jsx";
+import PersonalBorrowRequest from "./member_pages/PersonalBorrowRequest.jsx";
 
 function App() {
     //Navbar setup a condition to see if current path is login or registration then use that for navbar render
@@ -42,6 +43,7 @@ function App() {
                     <Route path="/catalogue" element={<BookCatalogue />} />
                     <Route path="/catalogue/book/:bookId" element={<BookDetails />} />
                     <Route path="/cart" element={<BorrowCart />} />
+                    <Route path="/requests" element={<PersonalBorrowRequest />} />
                 </Route>
 
                 <Route element={<PrivateRoute requiredRole="Admin" />}>

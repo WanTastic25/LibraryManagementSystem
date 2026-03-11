@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 using LibraryManagementSystem.Helpers;
 using LibraryManagementSystem.Models.Dtos.BorrowRequestDto;
+using System.Linq;
 
 namespace LibraryManagementSystem.Controllers
 {
@@ -30,7 +31,7 @@ namespace LibraryManagementSystem.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> addBorrowRequest(AddBorrowRequestDto addBorrowRequestDto)
+        public async Task<IActionResult> AddBorrowRequest(AddBorrowRequestDto addBorrowRequestDto)
         {
             var userId = GetUserId();
 
@@ -48,6 +49,54 @@ namespace LibraryManagementSystem.Controllers
             await dbContext.SaveChangesAsync();
 
             return Ok(request);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllBorrowRequest()
+        {
+            var allBorrowRequests = await dbContext.BorrowRequests
+                .Include(br => br.Book)
+                .Include(br => br.User)
+                .ToListAsync();
+            
+            return Ok(allBorrowRequests);
+        }
+
+        [HttpPut]
+        [Route("{requestId:guid}")]
+        public async Task<IActionResult> UpdateBorrowRequest(Guid requestId, UpdateBorrowRequestDto updateBorrowRequestDto)
+        {
+            var borrowRequest = await dbContext.BorrowRequests.FindAsync(requestId);
+
+            if (borrowRequest != null)
+            {
+                borrowRequest.status = updateBorrowRequestDto.status;
+                borrowRequest.bookQuantity = updateBorrowRequestDto.bookQuantity;
+            }
+            else
+            {
+                return NotFound();
+            }
+
+            // Temporary, the real plan is when accepted or declined it gets removed
+            await dbContext.SaveChangesAsync();
+
+            return Ok(borrowRequest);
+        }
+
+        [HttpGet]
+        [Route("your-requests")]
+        public async Task<IActionResult> GetPersonalBorrowRequest()
+        {
+            var userId = GetUserId();
+
+            var personalBorrowRequest = await dbContext.BorrowRequests
+                .Include(br => br.Book)
+                .Include(br => br.User)
+                .Where(br => br.userId == userId)
+                .ToListAsync();
+
+            return Ok(personalBorrowRequest);
         }
     }
 }
