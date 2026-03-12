@@ -90,12 +90,16 @@ namespace LibraryManagementSystem.Controllers
         {
             var user = await dbContext.Users.FindAsync(Id);
 
+            var passwordSalt = GenerateSalt();
+            var hashedPassword = HashPassword(updateUserDto.Password, passwordSalt);
+
             if (user is not null)
             {
                 user.Email = updateUserDto.Email;
                 user.Name = updateUserDto.Name;
-                user.Password = updateUserDto.Password;
+                user.Password = hashedPassword;
                 user.Role = updateUserDto.Role;
+                user.PasswordSalt = passwordSalt;
 
                 await dbContext.SaveChangesAsync();
             }

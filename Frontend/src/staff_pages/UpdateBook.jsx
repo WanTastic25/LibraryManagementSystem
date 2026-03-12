@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 function UpdateBook() {
     const { bookId } = useParams();
@@ -163,7 +163,10 @@ function UpdateBook() {
                     />
                 </div>
 
-                <button className="btn btn-success mt-3" type="submit">Update</button>
+                <button className="btn btn-success mt-3 me-2" type="submit">Update</button>
+                <Link className="btn btn-secondary mt-3" to={"/book-list"}>
+                    Back
+                </Link>
             </form>
         </div>
     )

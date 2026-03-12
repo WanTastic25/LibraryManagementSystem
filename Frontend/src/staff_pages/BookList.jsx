@@ -33,38 +33,53 @@ function BookList({ onEdit }) {
         fetchBook();
     }, []);
 
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error}</div>;
+
     return (
-        <div className="tableCard d-flex justify-content-center flex-column p-5 m-5">
-            <div className="tableTitle">
-                <h1 className="basicText">Books In Database</h1>
-            </div>
-            <div className="tableContainer">
-                <table className="table table-dark table-striped mb-0">
-                    <thead>
-                        <tr>
-                            <th>Book ID</th>
-                            <th>ISBN</th>
-                            <th>Title</th>
-                            <th>Author</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {books.map(book => (
-                            <tr key={book.bookId}>
-                                <td>{book.bookId}</td>
-                                <td>{book.isbn}</td>
-                                <td>{book.title}</td>
-                                <td>{book.author}</td>
-                                <td>
-                                    <Link className="btn btn-primary" to={`/book-list/book/${book.bookId}`}>
-                                        Edit
-                                    </Link>
-                                </td>
+        <div className="container py-5">
+            <div className="card shadow-lg border-0 rounded-4">
+                <div className="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+                    <h3 className="mb-0 fw-semibold">Books In Database</h3>
+
+                    <Link className="btn btn-primary px-4 py-2 rounded-pill fw-semibold"
+                        to="/book-list/add-book">
+                        + Add Book
+                    </Link>
+                </div>
+
+                <div className="card-body p-0">
+                    <table className="table table-hover align-middle mb-0">
+                        <thead className="table-light">
+                            <tr>
+                                <th>Book ID</th>
+                                <th>ISBN</th>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th className="text-center">Actions</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
+                        </thead>
+
+                        <tbody>
+                            {books.map(book => (
+                                <tr key={book.bookId}>
+                                    <td className="text-muted small">{book.bookId}</td>
+                                    <td className="">{book.isbn}</td>
+                                    <td className="fw-semibold">{book.title}</td>
+                                    <td className="">{book.author}</td>
+                                    <td className="text-center">
+                                        <Link
+                                            className="btn btn-outline-primary btn-sm"
+                                            to={`/book-list/book/${book.bookId}`}
+                                        >
+                                            Edit
+                                        </Link>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     )

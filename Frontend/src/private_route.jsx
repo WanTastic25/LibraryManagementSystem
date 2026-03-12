@@ -14,7 +14,13 @@ const PrivateRoute = ({ requiredRole }) => {
     return <Navigate to="/login" />;
   }
 
-  if (requiredRole && role !== requiredRole) return <Navigate to="/login" />;
+  if (requiredRole) {
+    const allowedRoles = Array.isArray(requiredRole) ? requiredRole : [requiredRole];
+
+    if (!allowedRoles.includes(role)) {
+      return <Navigate to="/login" />;
+    }
+  }
 
   return <Outlet />;
 }

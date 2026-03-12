@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 function AddBook() {
     const isbnRef = useRef();
@@ -76,6 +77,9 @@ function AddBook() {
 
                 <button className="btn btn-success mt-3" type="submit">Add Book</button>
                 <button className="btn btn-danger ms-2 mt-3" type="reset">Reset</button>
+                <Link className="btn btn-secondary ms-2 mt-3" to={"/book-list"}>
+                    Back
+                </Link>
             </form>
         </div>
     )

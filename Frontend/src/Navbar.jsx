@@ -8,11 +8,17 @@ function Navbar({ role }) {
         <nav className="navbar navbar-expand-lg sticky-top green-navbar">
             <ul className="navbar-nav ms-auto">
                 <li className="nav-item"><Link className="nav-link text-white" to="/">Logout</Link></li>
-                {role === "Admin" && (
+                {(role === "Admin" || role === "Librarian") && (
                     <>
-                        <li className="nav-item"><Link className="nav-link text-white" to="#">Users List</Link></li>
                         <li className="nav-item"><Link className="nav-link text-white" to="/book-list">Books List</Link></li>
-                        <li className="nav-item"><Link className="nav-link text-white" to="/add-book">Add Books</Link></li>
+                        <li className="nav-item"><Link className="nav-link text-white" to="/borrow-list">Borrow List</Link></li>
+                        
+                    </>
+                )}
+
+                {(role === "Admin") && (
+                    <>
+                        <li className="nav-item"><Link className="nav-link text-white" to="/user-list">Users List</Link></li>
                     </>
                 )}
 

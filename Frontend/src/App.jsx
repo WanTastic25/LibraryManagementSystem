@@ -15,6 +15,7 @@ import Navbar from "./Navbar.jsx";
 import BorrowButton from "./member_pages/BorrowButton.jsx";
 import BorrowCart from "./member_pages/BorrowCart.jsx";
 import PersonalBorrowRequest from "./member_pages/PersonalBorrowRequest.jsx";
+import BorrowReqList from "./staff_pages/BorrowReqList.jsx";
 
 function App() {
     //Navbar setup a condition to see if current path is login or registration then use that for navbar render
@@ -46,10 +47,17 @@ function App() {
                     <Route path="/requests" element={<PersonalBorrowRequest />} />
                 </Route>
 
-                <Route element={<PrivateRoute requiredRole="Admin" />}>
+                <Route element={<PrivateRoute requiredRole={["Admin", "Librarian"]} />}>
                     <Route path="/book-list" element={<BookList />} />
                     <Route path="/book-list/book/:bookId" element={<UpdateBook />} />
-                    <Route path="/add-book" element={<AddBook />} />
+                    <Route path="/book-list/add-book" element={<AddBook />} />
+                    <Route path="/borrow-list" element={<BorrowReqList />} />
+                </Route>
+
+                <Route element={<PrivateRoute requiredRole={"Admin"} />}>
+                    <Route path="/user-list" element={<UserList />} />
+                    <Route path="/user-list/user/:Id" element={<UpdateUser />} />
+                    <Route path="/user-list/add-user" element={<AddUser />} />
                 </Route>
             </Routes>
         </Router>

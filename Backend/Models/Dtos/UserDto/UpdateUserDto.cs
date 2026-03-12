@@ -8,5 +8,6 @@ namespace LibraryManagementSystem.Models.Dtos.UserDto
         [Required] public string Password { get; set; }
         [Required] public string Name { get; set; }
         [Required] public string Role { get; set; }
+        public string PasswordSalt { get; set; }
     }
 }

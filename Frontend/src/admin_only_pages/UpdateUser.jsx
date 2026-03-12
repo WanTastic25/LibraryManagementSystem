@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
+import { useParams, Link } from "react-router-dom";
 
-function UpdateUser({ editUserId }) {
+function UpdateUser() {
+    const { Id } = useParams();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [user, setUser] = useState({
@@ -11,9 +13,17 @@ function UpdateUser({ editUserId }) {
     });
 
     useEffect(() => {
-        if (!editUserId) return
+        if (!Id) {
+            alert("Error: No User selected to edit!");
+            return
+        }
 
-        fetch(`http://localhost:5009/api/User/${editUserId}`)
+        fetch(`http://localhost:5009/api/User/${Id}`, {
+            headers: {
+                'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
+                'Content-Type': 'application/json'
+            }
+        })
             .then(res => {
                 if (!res.ok) throw new Error("Network response was not ok");
                 return res.json();
@@ -26,7 +36,7 @@ function UpdateUser({ editUserId }) {
                 setError(err.message);
                 setLoading(false);
             });
-    }, [editUserId])
+    }, [Id])
 
     function handleChange(e) {
         const { name, value } = e.target;
@@ -39,7 +49,7 @@ function UpdateUser({ editUserId }) {
     function handleSubmit(e) {
         e.preventDefault();
 
-        fetch(`http://localhost:5009/api/User/${editUserId}`, {
+        fetch(`http://localhost:5009/api/User/${Id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -112,7 +122,10 @@ function UpdateUser({ editUserId }) {
                         </select>
                     </div>
 
-                    <button className="btn btn-success mt-3" type="submit">Update</button>
+                    <button className="btn btn-success mt-3 me-2" type="submit">Update</button>
+                    <Link className="btn btn-secondary mt-3" to={"/user-list"}>
+                        Back
+                    </Link>
                 </form>
             </div>
         </div>
