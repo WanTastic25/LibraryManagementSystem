@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.Security.Claims;
+using LibraryManagementSystem.Services;
 
 namespace LibraryManagementSystem
 {
@@ -43,6 +44,7 @@ namespace LibraryManagementSystem
                     };
                 });
 
+            builder.Services.AddHostedService<BorrowRequestCleanupService>();
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

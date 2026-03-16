@@ -42,6 +42,8 @@ function PersonalBorrowRequest() {
                 return "bg-success";
             case "Rejected":
                 return "bg-danger";
+            case "Overdue":
+                return "bg-danger";
             default:
                 return "bg-secondary";
         }
@@ -57,7 +59,7 @@ function PersonalBorrowRequest() {
         <div className="p-5 min-vh-100">
             <div className="row g-4">
                 {requests.map(request => (
-                    <div className="col-2" key={request.requestId}>
+                    <div className="col-md-3 col-sm-6" key={request.requestId}>
                         <div className="card p-1 h-100">
                             <img className="card-image rounded" src={`http://localhost:5009${request.book?.imageUrl}`} alt={request.book?.title} />
                             <div className="card-body d-flex flex-column">
@@ -67,6 +69,12 @@ function PersonalBorrowRequest() {
                                 </p>
                                 <p className="small mb-2">
                                     Quantity: <strong>{request.bookQuantity}</strong>
+                                </p>
+                                <p className="small mb-2">
+                                    Pickup: <strong>{request.pickupDate}</strong>
+                                </p>
+                                <p className="small mb-2">
+                                    Return: <strong>{request.returnDate}</strong>
                                 </p>
                                 <div className="mt-auto">
                                     <span className={`badge ${getStatusClass(request.status)} px-3 py-2`}>

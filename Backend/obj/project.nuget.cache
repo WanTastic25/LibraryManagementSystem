@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cqj+zgc1Sa4=",
+  "dgSpecHash": "EoBxrvfjCU4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\LibraryManagementSystem.csproj",
+  "projectFilePath": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\LibraryManagementSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wanas\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\wanas\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

@@ -268,6 +268,105 @@
         }
       }
     },
+    "/api/BorrowRequest": {
+      "post": {
+        "tags": [
+          "BorrowRequest"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddBorrowRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddBorrowRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddBorrowRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "BorrowRequest"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BorrowRequest/{requestId}/approve": {
+      "put": {
+        "tags": [
+          "BorrowRequest"
+        ],
+        "parameters": [
+          {
+            "name": "requestId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BorrowRequest/{requestId}/reject": {
+      "put": {
+        "tags": [
+          "BorrowRequest"
+        ],
+        "parameters": [
+          {
+            "name": "requestId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/BorrowRequest/your-requests": {
+      "get": {
+        "tags": [
+          "BorrowRequest"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Cart": {
       "post": {
         "tags": [
@@ -355,7 +454,7 @@
         }
       }
     },
-    "/api/Cart/{cartItemId}": {
+    "/api/Cart/item/{cartItemId}": {
       "delete": {
         "tags": [
           "Cart"
@@ -363,6 +462,29 @@
         "parameters": [
           {
             "name": "cartItemId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Cart/{cartId}": {
+      "delete": {
+        "tags": [
+          "Cart"
+        ],
+        "parameters": [
+          {
+            "name": "cartId",
             "in": "path",
             "required": true,
             "schema": {
@@ -508,6 +630,36 @@
   },
   "components": {
     "schemas": {
+      "AddBorrowRequestDto": {
+        "type": "object",
+        "properties": {
+          "bookId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "bookQuantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "returnDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "pickupDate": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "additionalProperties": false
+      },
       "AddToCartDto": {
         "type": "object",
         "properties": {
@@ -619,6 +771,10 @@
           "role": {
             "minLength": 1,
             "type": "string"
+          },
+          "passwordSalt": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

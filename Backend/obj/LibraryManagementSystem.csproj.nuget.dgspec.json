@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\LibraryManagementSystem.csproj": {}
+    "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\LibraryManagementSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\LibraryManagementSystem.csproj": {
+    "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\LibraryManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\LibraryManagementSystem.csproj",
+        "projectUniqueName": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\LibraryManagementSystem.csproj",
         "projectName": "LibraryManagementSystem",
-        "projectPath": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\LibraryManagementSystem.csproj",
+        "projectPath": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\LibraryManagementSystem.csproj",
         "packagesPath": "C:\\Users\\wanas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\obj\\",
+        "outputPath": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -63,25 +63,64 @@ namespace LibraryManagementSystem.Controllers
         }
 
         [HttpPut]
-        [Route("{requestId:guid}")]
-        public async Task<IActionResult> UpdateBorrowRequest(Guid requestId, UpdateBorrowRequestDto updateBorrowRequestDto)
+        [Route("{requestId:guid}/approve")]
+        public async Task<IActionResult> ApproveBorrowRequest(Guid requestId)
         {
             var borrowRequest = await dbContext.BorrowRequests.FindAsync(requestId);
 
             if (borrowRequest != null)
             {
-                borrowRequest.status = updateBorrowRequestDto.status;
-                borrowRequest.bookQuantity = updateBorrowRequestDto.bookQuantity;
+                borrowRequest.status = "Approved";
             }
             else
             {
                 return NotFound();
             }
 
-            // Temporary, the real plan is when accepted or declined it gets removed
             await dbContext.SaveChangesAsync();
 
-            return Ok(borrowRequest);
+            return Ok("Request Approved");
+        }
+
+        [HttpPut]
+        [Route("{requestId:guid}/reject")]
+        public async Task<IActionResult> RejectBorrowRequest(Guid requestId)
+        {
+            var borrowRequest = await dbContext.BorrowRequests.FindAsync(requestId);
+
+            if (borrowRequest != null)
+            {
+                borrowRequest.status = "Rejected";
+                borrowRequest.RejectedAt = DateTime.UtcNow;
+            }
+            else
+            {
+                return NotFound();
+            }
+
+            await dbContext.SaveChangesAsync();
+
+            return Ok("Request Rejected");
+        }
+
+        [HttpPut]
+        [Route("{requestId:guid}/borrow")]
+        public async Task<IActionResult> BorrowConfirm(Guid requestId)
+        {
+            var borrowRequest = await dbContext.BorrowRequests.FindAsync(requestId);
+
+            if (borrowRequest != null)
+            {
+                borrowRequest.status = "Borrowed";
+            }
+            else
+            {
+                return NotFound();
+            }
+
+            await dbContext.SaveChangesAsync();
+
+            return Ok("Book Passed to Member");
         }
 
         [HttpGet]

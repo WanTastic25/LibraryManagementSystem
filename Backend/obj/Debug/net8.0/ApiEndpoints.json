@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "loginUserDto",
-        "Type": "LibraryManagementSystem.Models.UserDto.LoginUserDto",
+        "Type": "LibraryManagementSystem.Models.Dtos.UserDto.LoginUserDto",
         "IsRequired": true
       }
     ],
@@ -25,7 +25,7 @@
     "Parameters": [
       {
         "Name": "registerMemberDto",
-        "Type": "LibraryManagementSystem.Models.UserDto.RegisterMemberDto",
+        "Type": "LibraryManagementSystem.Models.Dtos.UserDto.RegisterMemberDto",
         "IsRequired": true
       }
     ],
@@ -161,6 +161,74 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LibraryManagementSystem.Controllers.BorrowRequestController",
+    "Method": "AddBorrowRequest",
+    "RelativePath": "api/BorrowRequest",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addBorrowRequestDto",
+        "Type": "LibraryManagementSystem.Models.Dtos.BorrowRequestDto.AddBorrowRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.BorrowRequestController",
+    "Method": "GetAllBorrowRequest",
+    "RelativePath": "api/BorrowRequest",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.BorrowRequestController",
+    "Method": "ApproveBorrowRequest",
+    "RelativePath": "api/BorrowRequest/{requestId}/approve",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.BorrowRequestController",
+    "Method": "RejectBorrowRequest",
+    "RelativePath": "api/BorrowRequest/{requestId}/reject",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Controllers.BorrowRequestController",
+    "Method": "GetPersonalBorrowRequest",
+    "RelativePath": "api/BorrowRequest/your-requests",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LibraryManagementSystem.Controllers.CartController",
     "Method": "AddToCart",
     "RelativePath": "api/Cart",
@@ -170,7 +238,7 @@
     "Parameters": [
       {
         "Name": "addToCartDto",
-        "Type": "LibraryManagementSystem.Models.CartDto.AddToCartDto",
+        "Type": "LibraryManagementSystem.Models.Dtos.CartDto.AddToCartDto",
         "IsRequired": true
       }
     ],
@@ -188,14 +256,14 @@
   },
   {
     "ContainingType": "LibraryManagementSystem.Controllers.CartController",
-    "Method": "RemoveItem",
-    "RelativePath": "api/Cart/{cartItemId}",
+    "Method": "RemoveCart",
+    "RelativePath": "api/Cart/{cartId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "cartItemId",
+        "Name": "cartId",
         "Type": "System.Guid",
         "IsRequired": true
       }
@@ -235,6 +303,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LibraryManagementSystem.Controllers.CartController",
+    "Method": "RemoveItem",
+    "RelativePath": "api/Cart/item/{cartItemId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartItemId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LibraryManagementSystem.Controllers.UserController",
     "Method": "GetAllUser",
     "RelativePath": "api/User",
@@ -254,7 +338,7 @@
     "Parameters": [
       {
         "Name": "addUserDto",
-        "Type": "LibraryManagementSystem.Models.UserDto.AddUserDto",
+        "Type": "LibraryManagementSystem.Models.Dtos.UserDto.AddUserDto",
         "IsRequired": true
       }
     ],
@@ -275,7 +359,7 @@
       },
       {
         "Name": "updateUserDto",
-        "Type": "LibraryManagementSystem.Models.UserDto.UpdateUserDto",
+        "Type": "LibraryManagementSystem.Models.Dtos.UserDto.UpdateUserDto",
         "IsRequired": true
       }
     ],

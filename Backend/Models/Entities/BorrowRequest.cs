@@ -11,7 +11,8 @@ namespace LibraryManagementSystem.Models.Entities
         public Guid userId { get; set; }
         public User User { get; set; }
         public string status { get; set; }
-        public DateTime ReturnDate { get; set; }
-        public DateTime PickupDate { get; set; }
+        public DateOnly ReturnDate { get; set; }
+        public DateOnly PickupDate { get; set; }
+        public DateTime? RejectedAt { get; set; }
     }
 }

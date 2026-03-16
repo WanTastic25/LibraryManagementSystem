@@ -1,3 +1,4 @@
+import { Button } from "bootstrap";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -6,34 +7,94 @@ function BorrowReqList() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    useEffect(() => {
-        const fetchRequest = async () => {
-            setLoading(true);
+    const fetchRequest = async () => {
+        setLoading(true);
 
-            try {
-                const res = await fetch("http://localhost:5009/api/BorrowRequest?status=Pending", {
-                    method: "GET",
-                    headers: {
-                        'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
-                        'Content-Type': 'application/json'
-                    }
-                })
+        try {
+            const res = await fetch("http://localhost:5009/api/BorrowRequest?status=Pending", {
+                method: "GET",
+                headers: {
+                    'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
+                    'Content-Type': 'application/json'
+                }
+            })
 
-                if (!res.ok)
-                    throw new Error("No Response")
+            if (!res.ok)
+                throw new Error("No Response")
 
-                const data = await res.json();
-                setRequests(data);
-                setLoading(false);
+            const data = await res.json();
+            setRequests(data);
+            setLoading(false);
 
-            } catch (err) {
-                setError(err.message);
-                setLoading(false);
-            }
+        } catch (err) {
+            setError(err.message);
+            setLoading(false);
         }
+    }
 
+    useEffect(() => {
         fetchRequest();
-    }, [])
+    }, []);
+
+    async function handleApprove(requestId) {
+        try {
+            const res = await fetch(`http://localhost:5009/api/BorrowRequest/${requestId}/approve`, {
+                method: "PUT",
+                headers: {
+                    'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (!res.ok) {
+                throw new Error("Approve failed");
+            }
+
+            fetchRequest();
+        } catch (err) {
+            setError(err.message);
+        }
+    }
+
+    async function handleReject(requestId) {
+        try {
+            const res = await fetch(`http://localhost:5009/api/BorrowRequest/${requestId}/reject`, {
+                method: "PUT",
+                headers: {
+                    'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (!res.ok) {
+                throw new Error("Reject failed");
+            }
+
+            fetchRequest();
+        } catch (err) {
+            setError(err.message);
+        }
+    }
+
+    async function handleBorrow(requestId) {
+        try {
+            const res = await fetch(`http://localhost:5009/api/BorrowRequest/${requestId}/borrow`, {
+                method: "PUT",
+                headers: {
+                    'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (!res.ok) {
+                throw new Error("Borrow failed");
+            }
+
+            fetchRequest();
+        } catch (err) {
+            setError(err.message);
+        }
+    }
 
     const getStatusClass = (status) => {
         switch (status) {
@@ -42,6 +103,10 @@ function BorrowReqList() {
             case "Approved":
                 return "bg-success";
             case "Rejected":
+                return "bg-danger";
+            case "Borrowed":
+                return "bg-warning";
+            case "Overdue":
                 return "bg-danger";
             default:
                 return "bg-secondary";
@@ -69,6 +134,7 @@ function BorrowReqList() {
                                 <th>Title</th>
                                 <th>Author</th>
                                 <th>User ID</th>
+                                <th>User Name</th>
                                 <th>Quantity</th>
                                 <th>Pickup Date</th>
                                 <th>Return Date</th>
@@ -102,6 +168,10 @@ function BorrowReqList() {
                                     </td>
 
                                     <td>
+                                        {request.user.name}
+                                    </td>
+
+                                    <td>
                                         <strong>{request.bookQuantity}</strong>
                                     </td>
 
@@ -120,12 +190,26 @@ function BorrowReqList() {
                                     </td>
 
                                     <td>
-                                        <Link
-                                            className="btn btn-outline-primary btn-sm"
-                                            to={`#`}
+                                        <button
+                                            className="btn btn-outline-success btn-sm"
+                                            onClick={() => handleApprove(request.requestId)}
                                         >
-                                            Edit
-                                        </Link>
+                                            Approve
+                                        </button>
+
+                                        <button
+                                            className="btn btn-outline-danger btn-sm"
+                                            onClick={() => handleReject(request.requestId)}
+                                        >
+                                            Reject
+                                        </button>
+
+                                        <button
+                                            className="btn btn-outline-warning btn-sm"
+                                            onClick={() => handleBorrow(request.requestId)}
+                                        >
+                                            Borrow
+                                        </button>
                                     </td>
                                 </tr>
                             ))}
