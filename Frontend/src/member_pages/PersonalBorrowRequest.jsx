@@ -58,6 +58,8 @@ function PersonalBorrowRequest() {
     return (
         <div className="p-5 min-vh-100">
             <div className="row g-4">
+                <h1>Your Requests</h1>
+                <hr />
                 {requests.map(request => (
                     <div className="col-md-3 col-sm-6" key={request.requestId}>
                         <div className="card p-1 h-100">

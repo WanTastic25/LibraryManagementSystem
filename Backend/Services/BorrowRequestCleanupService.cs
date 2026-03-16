@@ -25,15 +25,16 @@ namespace LibraryManagementSystem.Services
                 var expiredRequests = await context.BorrowRequests
                     .Where(r => r.status == "Rejected"
                         && r.RejectedAt != null
-                        && r.RejectedAt <= DateTime.UtcNow.AddDays(-1))
+                        && r.RejectedAt <= DateTime.UtcNow.AddMinutes(-1))
                     .ToListAsync();
 
                 if (expiredRequests.Any())
                     context.BorrowRequests.RemoveRange(expiredRequests);
 
                 var today = DateOnly.FromDateTime(DateTime.UtcNow);
+
                 var overdueRequests = await context.BorrowRequests
-                    .Where(r => r.status == "Borrowed"
+                    .Where(r => r.status == "Picked Up"
                         && r.ReturnDate < today)
                     .ToListAsync();
 
@@ -41,7 +42,7 @@ namespace LibraryManagementSystem.Services
                     request.status = "Overdue";
     
                 await context.SaveChangesAsync();
-                await Task.Delay(TimeSpan.FromHours(1), stoppingToken);
+                await Task.Delay(TimeSpan.FromMinutes(1), stoppingToken);
             }
         }
     }

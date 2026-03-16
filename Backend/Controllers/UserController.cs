@@ -127,5 +127,16 @@ namespace LibraryManagementSystem.Controllers
 
             return NotFound();
         }
+
+        [HttpGet]
+        [Route("user-count")]
+        public async Task<IActionResult> UserCount()
+        {
+            int memberCount = await dbContext.Users
+            .Where(u => u.Role == "Member")
+            .CountAsync();
+
+            return Ok(memberCount);
+        }
     }
 }

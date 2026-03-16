@@ -58,7 +58,7 @@ namespace LibraryManagementSystem.Controllers
                 .Include(br => br.Book)
                 .Include(br => br.User)
                 .ToListAsync();
-            
+
             return Ok(allBorrowRequests);
         }
 
@@ -104,14 +104,14 @@ namespace LibraryManagementSystem.Controllers
         }
 
         [HttpPut]
-        [Route("{requestId:guid}/borrow")]
-        public async Task<IActionResult> BorrowConfirm(Guid requestId)
+        [Route("{requestId:guid}/pick-up")]
+        public async Task<IActionResult> PickUpBook(Guid requestId)
         {
             var borrowRequest = await dbContext.BorrowRequests.FindAsync(requestId);
 
             if (borrowRequest != null)
             {
-                borrowRequest.status = "Borrowed";
+                borrowRequest.status = "Picked Up";
             }
             else
             {
@@ -136,6 +136,45 @@ namespace LibraryManagementSystem.Controllers
                 .ToListAsync();
 
             return Ok(personalBorrowRequest);
+        }
+
+        [HttpDelete]
+        [Route("{requestId:guid}")]
+        public async Task<IActionResult> DeleteRequest(Guid requestId)
+        {
+            var borrowRequest = await dbContext.BorrowRequests.FindAsync(requestId);
+
+            if (borrowRequest != null)
+            {
+                dbContext.BorrowRequests.Remove(borrowRequest);
+                dbContext.SaveChanges();
+
+                return Ok("Delete Success");
+            }
+
+            return NotFound();
+        }
+
+        [HttpGet]
+        [Route("borrow-count")]
+        public async Task<IActionResult> BorrowCount()
+        {
+            int borrowCount = await dbContext.BorrowRequests
+            .Where(br => br.status == "Picked Up")
+            .CountAsync();
+
+            return Ok(borrowCount);
+        }
+
+        [HttpGet]
+        [Route("overdue-book-count")]
+        public async Task<IActionResult> OverdueBookCount()
+        {
+            int bookCount = await dbContext.BorrowRequests
+            .Where(br => br.status == "Overdue")
+            .CountAsync();
+
+            return Ok(bookCount);
         }
     }
 }

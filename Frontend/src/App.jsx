@@ -16,6 +16,7 @@ import BorrowButton from "./member_pages/BorrowButton.jsx";
 import BorrowCart from "./member_pages/BorrowCart.jsx";
 import PersonalBorrowRequest from "./member_pages/PersonalBorrowRequest.jsx";
 import BorrowReqList from "./staff_pages/BorrowReqList.jsx";
+import BorrowAndReturn from "./staff_pages/Dashboards/BorrowAndReturn.jsx";
 
 function App() {
     //Navbar setup a condition to see if current path is login or registration then use that for navbar render
@@ -52,6 +53,7 @@ function App() {
                     <Route path="/book-list/book/:bookId" element={<UpdateBook />} />
                     <Route path="/book-list/add-book" element={<AddBook />} />
                     <Route path="/borrow-list" element={<BorrowReqList />} />
+                    <Route path="/dashboard" element={<BorrowAndReturn />} />
                 </Route>
 
                 <Route element={<PrivateRoute requiredRole={"Admin"} />}>

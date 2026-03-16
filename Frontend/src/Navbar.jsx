@@ -12,7 +12,7 @@ function Navbar({ role }) {
                     <>
                         <li className="nav-item"><Link className="nav-link text-white" to="/book-list">Books List</Link></li>
                         <li className="nav-item"><Link className="nav-link text-white" to="/borrow-list">Borrow List</Link></li>
-                        
+                        <li className="nav-item"><Link className="nav-link text-white" to="/dashboard">Dashboard</Link></li>
                     </>
                 )}
 

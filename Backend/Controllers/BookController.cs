@@ -127,5 +127,14 @@ namespace LibraryManagementSystem.Controllers
 
             return NotFound();
         }
+
+        [HttpGet]
+        [Route("book-count")]
+        public async Task<IActionResult> BookCount()
+        {
+            int bookCount = await dbContext.Books.CountAsync();
+
+            return Ok(bookCount);
+        }
     }
 }

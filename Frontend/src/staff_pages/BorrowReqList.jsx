@@ -76,9 +76,9 @@ function BorrowReqList() {
         }
     }
 
-    async function handleBorrow(requestId) {
+    async function handlePickup(requestId) {
         try {
-            const res = await fetch(`http://localhost:5009/api/BorrowRequest/${requestId}/borrow`, {
+            const res = await fetch(`http://localhost:5009/api/BorrowRequest/${requestId}/pick-up`, {
                 method: "PUT",
                 headers: {
                     'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
@@ -87,12 +87,35 @@ function BorrowReqList() {
             });
 
             if (!res.ok) {
-                throw new Error("Borrow failed");
+                throw new Error("Pick Up failed");
             }
 
             fetchRequest();
         } catch (err) {
             setError(err.message);
+        }
+    }
+
+    async function handleDelete(requestId) {
+        try {
+            const res = await fetch(`http://localhost:5009/api/BorrowRequest/${requestId}`, {
+                method: "DELETE",
+                headers: {
+                    "Authorization": `Bearer ${sessionStorage.getItem("token")}`
+                }
+            });
+
+            if (!res.ok) {
+                throw new Error("Delete failed");
+            }
+
+            alert("Request deleted");
+
+            fetchRequest();
+
+        } catch (error) {
+            console.error(error);
+            alert("Error deleting request");
         }
     }
 
@@ -104,8 +127,6 @@ function BorrowReqList() {
                 return "bg-success";
             case "Rejected":
                 return "bg-danger";
-            case "Borrowed":
-                return "bg-warning";
             case "Overdue":
                 return "bg-danger";
             default:
@@ -206,9 +227,16 @@ function BorrowReqList() {
 
                                         <button
                                             className="btn btn-outline-warning btn-sm"
-                                            onClick={() => handleBorrow(request.requestId)}
+                                            onClick={() => handlePickup(request.requestId)}
                                         >
-                                            Borrow
+                                            Picked Up
+                                        </button>
+
+                                        <button
+                                            className="btn btn-outline-danger btn-sm"
+                                            onClick={() => handleDelete(request.requestId)}
+                                        >
+                                            Delete
                                         </button>
                                     </td>
                                 </tr>
