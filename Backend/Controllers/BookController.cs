@@ -132,9 +132,15 @@ namespace LibraryManagementSystem.Controllers
         [Route("book-count")]
         public async Task<IActionResult> BookCount()
         {
-            int bookCount = await dbContext.Books.CountAsync();
+            var books = await dbContext.Books.ToListAsync();
+            int copyCount = 0;
 
-            return Ok(bookCount);
+            foreach (var book in books)
+            {
+                copyCount += book.Copies;
+            }
+
+            return Ok(copyCount);
         }
     }
 }

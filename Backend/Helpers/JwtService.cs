@@ -37,7 +37,7 @@ namespace LibraryManagementSystem.Helpers
                 audience: _audience,
                 claims: claims,
                 notBefore: DateTime.UtcNow,
-                expires: DateTime.UtcNow.AddMinutes(10),
+                expires: DateTime.UtcNow.AddHours(1),
                 signingCredentials: credentials
                 );
 

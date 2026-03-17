@@ -7,8 +7,16 @@
       "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\services\\borrowrequestcleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\models\\dtos\\borrowrequestdto\\updateborrowrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\models\\dtos\\borrowrequestdto\\updateborrowrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\models\\dtos\\borrowrequestdto\\addborrowrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\models\\dtos\\borrowrequestdto\\addborrowrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|c:\\users\\wanas\\source\\repos\\librarymanagementsystem\\backend\\controllers\\borrowrequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46AD26F9-C2D6-4A87-AF9A-EBF485A1748A}|Backend\\LibraryManagementSystem.csproj|solutionrelative:backend\\controllers\\borrowrequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +26,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BorrowRequestController.cs",
+              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Controllers\\BorrowRequestController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\BorrowRequestController.cs",
+              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Controllers\\BorrowRequestController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\BorrowRequestController.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T10:04:39.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateBorrowRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Models\\Dtos\\BorrowRequestDto\\UpdateBorrowRequestDto.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\Dtos\\BorrowRequestDto\\UpdateBorrowRequestDto.cs",
+              "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Models\\Dtos\\BorrowRequestDto\\UpdateBorrowRequestDto.cs",
+              "RelativeToolTip": "Backend\\Models\\Dtos\\BorrowRequestDto\\UpdateBorrowRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T10:04:33.088Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,14 +62,14 @@
               "RelativeDocumentMoniker": "Backend\\Services\\BorrowRequestCleanupService.cs",
               "ToolTip": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Services\\BorrowRequestCleanupService.cs",
               "RelativeToolTip": "Backend\\Services\\BorrowRequestCleanupService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwB8AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-13T10:01:37.786Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AddBorrowRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\Backend\\Models\\Dtos\\BorrowRequestDto\\AddBorrowRequestDto.cs",
               "RelativeDocumentMoniker": "Backend\\Models\\Dtos\\BorrowRequestDto\\AddBorrowRequestDto.cs",

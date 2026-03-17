@@ -37,6 +37,8 @@ function AddBook() {
             const data = await response.json();
             alert("Book added successfully!");
 
+            window.location.reload();
+
         } catch (err) {
             console.log("Error occured: " + err);
         }

@@ -211,33 +211,35 @@ function BorrowReqList() {
                                     </td>
 
                                     <td>
-                                        <button
-                                            className="btn btn-outline-success btn-sm"
-                                            onClick={() => handleApprove(request.requestId)}
-                                        >
-                                            Approve
-                                        </button>
+                                        <div className="d-flex flex-column gap-2">
+                                            <button
+                                                className="btn btn-outline-success btn-sm"
+                                                onClick={() => handleApprove(request.requestId)}
+                                            >
+                                                Approve
+                                            </button>
 
-                                        <button
-                                            className="btn btn-outline-danger btn-sm"
-                                            onClick={() => handleReject(request.requestId)}
-                                        >
-                                            Reject
-                                        </button>
+                                            <button
+                                                className="btn btn-outline-danger btn-sm"
+                                                onClick={() => handleReject(request.requestId)}
+                                            >
+                                                Reject
+                                            </button>
 
-                                        <button
-                                            className="btn btn-outline-warning btn-sm"
-                                            onClick={() => handlePickup(request.requestId)}
-                                        >
-                                            Picked Up
-                                        </button>
+                                            <button
+                                                className="btn btn-outline-warning btn-sm"
+                                                onClick={() => handlePickup(request.requestId)}
+                                            >
+                                                Picked Up
+                                            </button>
 
-                                        <button
-                                            className="btn btn-outline-danger btn-sm"
-                                            onClick={() => handleDelete(request.requestId)}
-                                        >
-                                            Delete
-                                        </button>
+                                            <button
+                                                className="btn btn-outline-danger btn-sm"
+                                                onClick={() => handleDelete(request.requestId)}
+                                            >
+                                                Delete
+                                            </button>
+                                        </div>
                                     </td>
                                 </tr>
                             ))}
