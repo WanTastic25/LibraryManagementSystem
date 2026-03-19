@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JBI5IPX4RA7jyAOBuuQkNSB59XN3YtVoC85lM8njq3s=",
+  "Hash": "pw1AyTzuhgmy0AqaQYeeQzOhzNW3CnrhNqiYnYThz+o=",
   "Source": "LibraryManagementSystem",
   "BasePath": "_content/LibraryManagementSystem",
   "Mode": "Default",
@@ -185,6 +185,27 @@
       "OriginalItemSpec": "wwwroot\\images\\bookCover\\73878104-33a0-4ba4-8888-12b32147f2d7.jpg"
     },
     {
+      "Identity": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\9c57069b-662c-4eb7-a9e2-b52ef620c7a7.jpg",
+      "SourceId": "LibraryManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\",
+      "BasePath": "_content/LibraryManagementSystem",
+      "RelativePath": "images/bookCover/9c57069b-662c-4eb7-a9e2-b52ef620c7a7#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "y83ikjq3ve",
+      "Integrity": "8gCh50akzIFv2fFGdne0I0I7dMExKbelJZmfbTVaqrQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bookCover\\9c57069b-662c-4eb7-a9e2-b52ef620c7a7.jpg"
+    },
+    {
       "Identity": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\adaad00e-0745-43f3-86f6-84e623a6a17a.jpg",
       "SourceId": "LibraryManagementSystem",
       "SourceType": "Discovered",
@@ -227,6 +248,27 @@
       "OriginalItemSpec": "wwwroot\\images\\bookCover\\b2c5facb-3d9a-46a5-9bcf-9e25ff9cfb69.jpg"
     },
     {
+      "Identity": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\bd1a8731-e454-4fb1-b1ae-ed06ca322b88.jpg",
+      "SourceId": "LibraryManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\",
+      "BasePath": "_content/LibraryManagementSystem",
+      "RelativePath": "images/bookCover/bd1a8731-e454-4fb1-b1ae-ed06ca322b88#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "38fr37x6nu",
+      "Integrity": "03Qw19Q0AEECgeuDLgBMmMZtQI76U1org5knWrJGO9A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bookCover\\bd1a8731-e454-4fb1-b1ae-ed06ca322b88.jpg"
+    },
+    {
       "Identity": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\db838e49-f402-49a3-9479-8687817a4e00.jpg",
       "SourceId": "LibraryManagementSystem",
       "SourceType": "Discovered",
@@ -246,6 +288,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\bookCover\\db838e49-f402-49a3-9479-8687817a4e00.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\ded0c1b2-4bbf-4e27-b757-1586ac478711.jpg",
+      "SourceId": "LibraryManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\",
+      "BasePath": "_content/LibraryManagementSystem",
+      "RelativePath": "images/bookCover/ded0c1b2-4bbf-4e27-b757-1586ac478711#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8xlcqfbyqq",
+      "Integrity": "/B8f05+FQZN6EgGhXFTaxU43lvSjJzQ5fBpkHHjqGK4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bookCover\\ded0c1b2-4bbf-4e27-b757-1586ac478711.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\fb1b64b2-8ba4-48d4-b2f1-bfc000927787.jpg",
+      "SourceId": "LibraryManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\",
+      "BasePath": "_content/LibraryManagementSystem",
+      "RelativePath": "images/bookCover/fb1b64b2-8ba4-48d4-b2f1-bfc000927787#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "g9dcxynyoc",
+      "Integrity": "3LgYK3DVnMiZjebk++g6uXNGnPyNT9pPdVeJExQTF0w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bookCover\\fb1b64b2-8ba4-48d4-b2f1-bfc000927787.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\fd5e8080-25f0-471e-bde4-b6e19f56f6ea.jpg",
+      "SourceId": "LibraryManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\",
+      "BasePath": "_content/LibraryManagementSystem",
+      "RelativePath": "images/bookCover/fd5e8080-25f0-471e-bde4-b6e19f56f6ea#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nm8fvjy0a2",
+      "Integrity": "kVtuq8MdLSnYj1PNkFMvCfKNSL5b1Dy6CyWQttrlSZg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bookCover\\fd5e8080-25f0-471e-bde4-b6e19f56f6ea.jpg"
     }
   ],
   "Endpoints": [
@@ -906,6 +1011,88 @@
       ]
     },
     {
+      "Route": "images/bookCover/9c57069b-662c-4eb7-a9e2-b52ef620c7a7.jpg",
+      "AssetFile": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\9c57069b-662c-4eb7-a9e2-b52ef620c7a7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "221970"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8gCh50akzIFv2fFGdne0I0I7dMExKbelJZmfbTVaqrQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Mar 2026 02:28:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8gCh50akzIFv2fFGdne0I0I7dMExKbelJZmfbTVaqrQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/bookCover/9c57069b-662c-4eb7-a9e2-b52ef620c7a7.y83ikjq3ve.jpg",
+      "AssetFile": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\9c57069b-662c-4eb7-a9e2-b52ef620c7a7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "221970"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8gCh50akzIFv2fFGdne0I0I7dMExKbelJZmfbTVaqrQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Mar 2026 02:28:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y83ikjq3ve"
+        },
+        {
+          "Name": "label",
+          "Value": "images/bookCover/9c57069b-662c-4eb7-a9e2-b52ef620c7a7.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8gCh50akzIFv2fFGdne0I0I7dMExKbelJZmfbTVaqrQ="
+        }
+      ]
+    },
+    {
       "Route": "images/bookCover/adaad00e-0745-43f3-86f6-84e623a6a17a.jpg",
       "AssetFile": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\adaad00e-0745-43f3-86f6-84e623a6a17a.jpg",
       "Selectors": [],
@@ -1070,6 +1257,88 @@
       ]
     },
     {
+      "Route": "images/bookCover/bd1a8731-e454-4fb1-b1ae-ed06ca322b88.38fr37x6nu.jpg",
+      "AssetFile": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\bd1a8731-e454-4fb1-b1ae-ed06ca322b88.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34037"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"03Qw19Q0AEECgeuDLgBMmMZtQI76U1org5knWrJGO9A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Mar 2026 02:27:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "38fr37x6nu"
+        },
+        {
+          "Name": "label",
+          "Value": "images/bookCover/bd1a8731-e454-4fb1-b1ae-ed06ca322b88.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-03Qw19Q0AEECgeuDLgBMmMZtQI76U1org5knWrJGO9A="
+        }
+      ]
+    },
+    {
+      "Route": "images/bookCover/bd1a8731-e454-4fb1-b1ae-ed06ca322b88.jpg",
+      "AssetFile": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\bd1a8731-e454-4fb1-b1ae-ed06ca322b88.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34037"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"03Qw19Q0AEECgeuDLgBMmMZtQI76U1org5knWrJGO9A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Mar 2026 02:27:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-03Qw19Q0AEECgeuDLgBMmMZtQI76U1org5knWrJGO9A="
+        }
+      ]
+    },
+    {
       "Route": "images/bookCover/db838e49-f402-49a3-9479-8687817a4e00.jpg",
       "AssetFile": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\db838e49-f402-49a3-9479-8687817a4e00.jpg",
       "Selectors": [],
@@ -1148,6 +1417,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-u/P8PQPhC7dIDWxnC1DyzPrkO7+nCzpRuMOjR1qkATg="
+        }
+      ]
+    },
+    {
+      "Route": "images/bookCover/ded0c1b2-4bbf-4e27-b757-1586ac478711.8xlcqfbyqq.jpg",
+      "AssetFile": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\ded0c1b2-4bbf-4e27-b757-1586ac478711.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "107638"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/B8f05+FQZN6EgGhXFTaxU43lvSjJzQ5fBpkHHjqGK4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Mar 2026 02:28:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8xlcqfbyqq"
+        },
+        {
+          "Name": "label",
+          "Value": "images/bookCover/ded0c1b2-4bbf-4e27-b757-1586ac478711.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/B8f05+FQZN6EgGhXFTaxU43lvSjJzQ5fBpkHHjqGK4="
+        }
+      ]
+    },
+    {
+      "Route": "images/bookCover/ded0c1b2-4bbf-4e27-b757-1586ac478711.jpg",
+      "AssetFile": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\ded0c1b2-4bbf-4e27-b757-1586ac478711.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "107638"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/B8f05+FQZN6EgGhXFTaxU43lvSjJzQ5fBpkHHjqGK4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Mar 2026 02:28:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/B8f05+FQZN6EgGhXFTaxU43lvSjJzQ5fBpkHHjqGK4="
+        }
+      ]
+    },
+    {
+      "Route": "images/bookCover/fb1b64b2-8ba4-48d4-b2f1-bfc000927787.g9dcxynyoc.jpg",
+      "AssetFile": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\fb1b64b2-8ba4-48d4-b2f1-bfc000927787.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17257"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3LgYK3DVnMiZjebk++g6uXNGnPyNT9pPdVeJExQTF0w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Mar 2026 02:31:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g9dcxynyoc"
+        },
+        {
+          "Name": "label",
+          "Value": "images/bookCover/fb1b64b2-8ba4-48d4-b2f1-bfc000927787.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3LgYK3DVnMiZjebk++g6uXNGnPyNT9pPdVeJExQTF0w="
+        }
+      ]
+    },
+    {
+      "Route": "images/bookCover/fb1b64b2-8ba4-48d4-b2f1-bfc000927787.jpg",
+      "AssetFile": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\fb1b64b2-8ba4-48d4-b2f1-bfc000927787.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17257"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3LgYK3DVnMiZjebk++g6uXNGnPyNT9pPdVeJExQTF0w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Mar 2026 02:31:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3LgYK3DVnMiZjebk++g6uXNGnPyNT9pPdVeJExQTF0w="
+        }
+      ]
+    },
+    {
+      "Route": "images/bookCover/fd5e8080-25f0-471e-bde4-b6e19f56f6ea.jpg",
+      "AssetFile": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\fd5e8080-25f0-471e-bde4-b6e19f56f6ea.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9677"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kVtuq8MdLSnYj1PNkFMvCfKNSL5b1Dy6CyWQttrlSZg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Mar 2026 02:30:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kVtuq8MdLSnYj1PNkFMvCfKNSL5b1Dy6CyWQttrlSZg="
+        }
+      ]
+    },
+    {
+      "Route": "images/bookCover/fd5e8080-25f0-471e-bde4-b6e19f56f6ea.nm8fvjy0a2.jpg",
+      "AssetFile": "C:\\Users\\wanas\\source\\repos\\LibraryManagementSystem\\backend\\wwwroot\\images\\bookCover\\fd5e8080-25f0-471e-bde4-b6e19f56f6ea.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9677"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kVtuq8MdLSnYj1PNkFMvCfKNSL5b1Dy6CyWQttrlSZg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 18 Mar 2026 02:30:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nm8fvjy0a2"
+        },
+        {
+          "Name": "label",
+          "Value": "images/bookCover/fd5e8080-25f0-471e-bde4-b6e19f56f6ea.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kVtuq8MdLSnYj1PNkFMvCfKNSL5b1Dy6CyWQttrlSZg="
         }
       ]
     }

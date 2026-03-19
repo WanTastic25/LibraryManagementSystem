@@ -176,5 +176,27 @@ namespace LibraryManagementSystem.Controllers
 
             return Ok(bookCount);
         }
+
+        [HttpGet]
+        [Route("approved-book-count")]
+        public async Task<IActionResult> ApprovedBookCount()
+        {
+            int bookCount = await dbContext.BorrowRequests
+            .Where(br => br.status == "Approved")
+            .CountAsync();
+
+            return Ok(bookCount);
+        }
+
+        [HttpGet]
+        [Route("pending-book-count")]
+        public async Task<IActionResult> PendingBookCount()
+        {
+            int bookCount = await dbContext.BorrowRequests
+            .Where(br => br.status == "Pending")
+            .CountAsync();
+
+            return Ok(bookCount);
+        }
     }
 }

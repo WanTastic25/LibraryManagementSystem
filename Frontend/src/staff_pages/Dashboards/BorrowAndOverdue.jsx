@@ -15,6 +15,8 @@ import {
 function BorrowAndOverdue() {
     const [memberCount, setMemberCount] = useState(0);
     const [bookCount, setBookCount] = useState(0);
+    const [approvedBookCount, setApprovedBookCount] = useState(0);
+    const [pendingBookCount, setPendingBookCount] = useState(0);
     const [pickedUpBookCount, setPickedUpBookCount] = useState(0);
     const [overdueBookCount, setOverdueBookCount] = useState(0);
 
@@ -23,6 +25,8 @@ function BorrowAndOverdue() {
         fetchBook();
         fetchPickedUpBook();
         fetchOverdueBook();
+        fetchApprovedBook();
+        fetchPendingBook();
     }, []);
 
     const fetchUser = async () => {
@@ -43,6 +47,26 @@ function BorrowAndOverdue() {
         });
         const data = await res.json();
         setBookCount(data);
+    };
+
+    const fetchPendingBook = async () => {
+        const res = await fetch('http://localhost:5009/api/BorrowRequest/pending-book-count', {
+            headers: {
+                'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
+            }
+        });
+        const data = await res.json();
+        setPendingBookCount(data);
+    };
+
+    const fetchApprovedBook = async () => {
+        const res = await fetch('http://localhost:5009/api/BorrowRequest/approved-book-count', {
+            headers: {
+                'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
+            }
+        });
+        const data = await res.json();
+        setApprovedBookCount(data);
     };
 
     const fetchPickedUpBook = async () => {
@@ -77,32 +101,46 @@ function BorrowAndOverdue() {
         <div className="container mt-5 min-vh-100">
 
             {/* Top cards */}
-            <div className="row g-4 mb-4">
-                <div className="col-md-3">
+            <div className="row g-4 mb-4 d-flex justify-content-center">
+                <div className="col-md-2">
                     <div className="card-dashboard p-3 text-center shadow-sm rounded-4">
                         <h1>{memberCount}</h1>
-                        <p>Members</p>
+                        <p>Registered Members</p>
                     </div>
                 </div>
 
-                <div className="col-md-3">
+                <div className="col-md-2">
                     <div className="card-dashboard p-3 text-center shadow-sm rounded-4">
                         <h1>{bookCount}</h1>
-                        <p>Books</p>
+                        <p>Total Books</p>
                     </div>
                 </div>
 
-                <div className="col-md-3">
+                <div className="col-md-2">
+                    <div className="card-dashboard p-3 text-center shadow-sm rounded-4">
+                        <h1>{pendingBookCount}</h1>
+                        <p>Requests Pending</p>
+                    </div>
+                </div>
+
+                <div className="col-md-2">
+                    <div className="card-dashboard p-3 text-center shadow-sm rounded-4">
+                        <h1>{approvedBookCount}</h1>
+                        <p>Requests Approved</p>
+                    </div>
+                </div>
+
+                <div className="col-md-2">
                     <div className="card-dashboard p-3 text-center shadow-sm rounded-4">
                         <h1>{pickedUpBookCount}</h1>
-                        <p>Borrowed</p>
+                        <p>Books Picked Up</p>
                     </div>
                 </div>
 
-                <div className="col-md-3">
+                <div className="col-md-2">
                     <div className="card-dashboard p-3 text-center shadow-sm rounded-4">
                         <h1>{overdueBookCount}</h1>
-                        <p>Overdue</p>
+                        <p>Books Overdue</p>
                     </div>
                 </div>
             </div>
